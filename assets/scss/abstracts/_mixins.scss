@@ -1,0 +1,100 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+            @content;
+        }
+    } @else {
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+            @content;
+        }
+    }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Kitty Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+    #{$context} & {
+        @content;
+    }
+}
+
+/**
+* FLEXBOX
+* A mixin to rule complex flexbox layout
+* @author nicolacastellanidev@gmail.com
+*/
+@mixin flexbox(
+    $display: flex,
+    $direction: row,
+    $placeContent: null,
+    $placeItems: null,
+    $wrap: nowrap,
+    $shrink: 0,
+    $grow: 0,
+    $alignContent: null,
+    $justifyContent: null,
+    $alignItems: null,
+    $justifyItems: null
+) {
+    display: $display;
+    flex-direction: $direction;
+
+    @if $placeContent == null {
+        @if $alignContent {
+            align-content: $alignContent;
+        }
+        @if $justifyContent {
+            justify-content: $justifyContent;
+        }
+    } @else {
+        place-content: $placeContent;
+    }
+
+    @if $placeItems == null {
+        @if $alignItems {
+            align-items: $alignItems;
+        }
+        @if $justifyItems {
+            justify-items: $justifyItems;
+        }
+    } @else {
+        place-items: $placeItems;
+    }
+
+    flex-wrap: $wrap;
+    flex-shrink: $shrink;
+    flex-grow: $grow;
+}
+
+/* It's a mixin that can be used to set the size of an icon. */
+@mixin icon-size {
+    float: left;
+    height: 30px;
+    width: 30px;
+}
+
+/* It's a mixin that can be used to set the style of a small button. */
+@mixin small-btn-style {
+    background-color: $game-btn-color !important;
+    box-shadow: $btn-shadow;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    border-radius: $border-radius !important;
+    border: $game-btn-border !important;
+}

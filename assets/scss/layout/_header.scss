@@ -1,0 +1,31 @@
+// ! Header
+
+/* ********* HEADER ********* */
+
+.header {
+    &__btn {
+        @include small-btn-style;
+        &--rules-icon,
+        &--new-icon,
+        &--settings-icon {
+            @include icon-size;
+        }
+
+        &--rules-icon {
+            background: url(/assets/img/icons/dark/question-mark.svg) no-repeat;
+        }
+        &--new-icon {
+            background: url(/assets/img/icons/dark/repeat.svg) no-repeat;
+        }
+        &--settings-icon {
+            background: url(/assets/img/icons/dark/cog.svg) no-repeat;
+        }
+
+        &:hover {
+            background-color: $main-green !important;
+            box-shadow: $inset-shadow;
+        }
+    }
+}
+
+/* ********* END ********* */

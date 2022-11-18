@@ -1,0 +1,98 @@
+// ! Main
+
+/* ********* MAIN ********* */
+
+.main {
+    width: 90% !important;
+    &__player {
+        background-color: rgba(255, 255, 255, 0.25) !important;
+        box-shadow: 2px 2px 6px 0px #b53b74 !important;
+        backdrop-filter: blur(4px) !important;
+        -webkit-backdrop-filter: blur(4px) !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        @include flexbox(
+            $display: flex,
+            $justifyContent: center,
+            $shrink: none,
+            $wrap: wrap
+        );
+        &-name {
+            font-size: 1.5rem;
+            font-family: $game-font;
+        }
+        &-score {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__current {
+        background: rgba(255, 255, 255, 0);
+        box-shadow: $btn-shadow;
+        backdrop-filter: blur(7.5px);
+        -webkit-backdrop-filter: blur(7.5px);
+        font-family: $game-font;
+        border-radius: $border-radius;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        width: auto !important;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        &-label {
+            margin-bottom: 0;
+        }
+        &-score {
+            margin-bottom: 0;
+        }
+    }
+
+    &__controls {
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem;
+
+        &-col--dice {
+            margin-left: 33.3%;
+
+            &-img {
+                height: 3rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                box-shadow: 2px 2px 6px 0px #b53b74 !important;
+                border-radius: 10px;
+            }
+        }
+
+        &-col--hold {
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &-btn {
+            @include small-btn-style;
+
+            &--hold {
+                background: url(/assets/img/icons/dark/save.svg) no-repeat;
+                @include icon-size;
+            }
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .main {
+        display: flex;
+        justify-content: space-evenly;
+        &__controls {
+            display: flex;
+            flex-direction: column;
+            margin: 0 1rem !important;
+            &-col--dice {
+                margin-left: 0px !important;
+            }
+        }
+    }
+}
+
+/* ********* END ********* */

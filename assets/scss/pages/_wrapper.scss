@@ -1,0 +1,17 @@
+// ! Wrapper
+
+/* ********* WRAPPER ********* */
+
+.wrapper {
+    height: 100%;
+    @include flexbox(
+        $display: flex,
+        $direction: column,
+        $justifyContent: space-between,
+        $alignItems: center
+    );
+    background: $background-color;
+    box-shadow: $inset-shadow;
+}
+
+/* ********* END ********* */

@@ -1,0 +1,47 @@
+// ! Menu
+
+/* ********* MENU ********* */
+
+.menu {
+    position: fixed;
+    height: 100%;
+    background: $background-color;
+    box-shadow: $inset-shadow;
+    z-index: 10;
+    @include flexbox(
+        $display: flex,
+        $alignItems: center,
+        $justifyContent: center
+    );
+
+    &__logo-image {
+        height: 5rem;
+        filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.5));
+    }
+
+    &__game-name {
+        font-family: $game-name-font;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $main-pink;
+        text-shadow: 1px 1px 1px #000000;
+    }
+
+    &__btn {
+        box-shadow: $btn-shadow;
+        background-color: $main-pink !important;
+        width: 40%;
+        color: #603d51 !important;
+        font-weight: bold !important;
+        border-radius: $border-radius !important;
+        &:hover {
+            box-shadow: $inset-shadow;
+            width: 40%;
+            color: #1a0f15 !important;
+            font-weight: bold !important;
+            background-color: $main-green !important;
+        }
+    }
+}
+
+/* ********* END ********* */
