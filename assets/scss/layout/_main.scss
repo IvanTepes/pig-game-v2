@@ -73,7 +73,8 @@
             @include small-btn-style;
 
             &--hold {
-                background: url(/pig-game-v2/assets/img/icons/dark/save.svg) no-repeat;
+                background: url(/pig-game-v2/assets/img/icons/dark/save.svg)
+                    no-repeat;
                 @include icon-size;
             }
         }

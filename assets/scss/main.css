@@ -426,13 +426,13 @@ body {
   width: 30px;
 }
 .header__btn--rules-icon {
-  background: url(/assets/img/icons/dark/question-mark.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/question-mark.svg) no-repeat;
 }
 .header__btn--new-icon {
-  background: url(/assets/img/icons/dark/repeat.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/repeat.svg) no-repeat;
 }
 .header__btn--settings-icon {
-  background: url(/assets/img/icons/dark/cog.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/cog.svg) no-repeat;
 }
 .header__btn:hover {
   background-color: #8feeb5 !important;
@@ -450,7 +450,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
 .footer__btn--back {
-  background: url(/assets/img/icons/dark/back-arrow.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/back-arrow.svg) no-repeat;
   float: left;
   height: 30px;
   width: 30px;
@@ -543,7 +543,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
 .main__controls-btn--hold {
-  background: url(/assets/img/icons/dark/save.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/save.svg) no-repeat;
   float: left;
   height: 30px;
   width: 30px;
