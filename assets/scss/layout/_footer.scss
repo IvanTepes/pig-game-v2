@@ -6,7 +6,8 @@
     &__btn {
         @include small-btn-style;
         &--back {
-            background: url(assets/img/icons/dark/back-arrow.svg) no-repeat;
+            background: url(master/assets/img/icons/dark/back-arrow.svg)
+                no-repeat;
             @include icon-size;
         }
     }
