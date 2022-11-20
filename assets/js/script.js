@@ -7,6 +7,6 @@ scoreInput.addEventListener('focusin', focusInFunction);
 scoreInput.addEventListener('focusout', focusOutFunction);
 
 function focusInFunction() {
-    document.body.style.position = 'absolute';
-    document.body.style.width = '100%';
+    // document.body.style.position = 'absolute';
+    document.body.style.height = '100vh';
 }
