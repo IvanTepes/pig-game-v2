@@ -4,7 +4,6 @@
 
 .header {
     &__btn {
-        @include small-btn-style;
         &--rules-icon,
         &--new-icon,
         &--settings-icon {
@@ -23,12 +22,5 @@
             background: url(/pig-game-v2/assets/img/icons/dark/cog.svg)
                 no-repeat;
         }
-
-        &:hover {
-            background-color: $main-green !important;
-            box-shadow: $inset-shadow;
-        }
     }
 }
-
-/* ********* END ********* */
