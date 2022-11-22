@@ -13,7 +13,8 @@
 @import 'layout/header', 'layout/footer', 'layout/main';
 
 // 5. Components
-// @import 'components/button';
+@import 'components/modals', 'components/buttons', 'components/carousel-dice',
+    'components/audio-switch';
 
 // 6. Page-specific styles
 @import 'pages/wrapper', 'pages/menu';
