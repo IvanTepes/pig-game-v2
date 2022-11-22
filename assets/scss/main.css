@@ -429,7 +429,7 @@ body {
 
 /* ********* FOOTER ********* */
 .footer__btn--back {
-  background: url(/pig-game-v2/assets/img/icons/dark/back-arrow.svg) no-repeat;
+  background: url(assets/img/icons/dark/back-arrow.svg) no-repeat;
   float: left;
   height: 30px;
   width: 30px;
