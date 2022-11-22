@@ -412,14 +412,6 @@ body {
 }
 
 /* ********* HEADER ********* */
-.header__btn {
-  background-color: rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 2px 2px 6px 0px #b53b74 !important;
-  backdrop-filter: blur(4px) !important;
-  -webkit-backdrop-filter: blur(4px) !important;
-  border-radius: 10px !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-}
 .header__btn--rules-icon, .header__btn--new-icon, .header__btn--settings-icon {
   float: left;
   height: 30px;
@@ -434,55 +426,26 @@ body {
 .header__btn--settings-icon {
   background: url(/pig-game-v2/assets/img/icons/dark/cog.svg) no-repeat;
 }
-.header__btn:hover {
-  background-color: #8feeb5 !important;
-  box-shadow: inset 0px 0px 6px 0px #3d2935 !important;
-}
 
-/* ********* END ********* */
 /* ********* FOOTER ********* */
-.footer__btn {
-  background-color: rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 2px 2px 6px 0px #b53b74 !important;
-  backdrop-filter: blur(4px) !important;
-  -webkit-backdrop-filter: blur(4px) !important;
-  border-radius: 10px !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-}
 .footer__btn--back {
   background: url(/pig-game-v2/assets/img/icons/dark/back-arrow.svg) no-repeat;
   float: left;
   height: 30px;
   width: 30px;
 }
-.footer__max-score {
-  align-self: center;
-}
-.footer__max-score--input {
-  background-color: #ffc4c8;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 2px 2px 6px 0px #b53b74 !important;
-}
-.footer__max-score--input:focus-visible {
-  outline: none;
-  background-color: #8feeb5;
-  box-shadow: 2px 2px 6px 0px #b53b74 !important;
-}
 
-/* ********* END ********* */
 /* ********* MAIN ********* */
 .main {
   width: 90% !important;
 }
 .main__player {
-  background-color: rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 2px 2px 6px 0px #b53b74 !important;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 6px 0px #b53b74;
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
   border-radius: 10px !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  margin: 1rem 0.5rem !important;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -492,19 +455,19 @@ body {
 }
 .main__player-name {
   font-size: 1.5rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif !important;
 }
 .main__player-score {
   font-size: 1.8rem;
 }
 .main__current {
   background: rgba(255, 255, 255, 0);
-  box-shadow: 2px 2px 6px 0px #b53b74 !important;
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
-  font-family: "Roboto", sans-serif;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 2px 2px 6px 0px #b53b74;
+  backdrop-filter: blur(7px) !important;
+  -webkit-backdrop-filter: blur(7px) !important;
+  font-family: "Roboto", sans-serif !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   width: auto !important;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -516,8 +479,8 @@ body {
   margin-bottom: 0;
 }
 .main__controls {
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 .main__controls-col--dice {
   margin-left: 33.3%;
@@ -526,22 +489,14 @@ body {
   height: 3rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  box-shadow: 2px 2px 6px 0px #b53b74 !important;
-  border-radius: 10px;
+  box-shadow: 2px 2px 6px 0px #b53b74;
+  border-radius: 10px !important;
 }
 .main__controls-col--hold {
   align-self: center;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-}
-.main__controls-btn {
-  background-color: rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 2px 2px 6px 0px #b53b74 !important;
-  backdrop-filter: blur(4px) !important;
-  -webkit-backdrop-filter: blur(4px) !important;
-  border-radius: 10px !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
 .main__controls-btn--hold {
   background: url(/pig-game-v2/assets/img/icons/dark/save.svg) no-repeat;
@@ -564,7 +519,166 @@ body {
     margin-left: 0px !important;
   }
 }
-/* ********* END ********* */
+/* ********* MODAL ********* */
+.modal {
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+.modal-content {
+  background-color: #d74389 !important;
+  box-shadow: 0px 0px 2px 0px #3d2935;
+}
+.modal-title {
+  font-family: "Gloria Hallelujah", cursive !important;
+  text-transform: uppercase !important;
+  font-size: 1.65rem;
+  font-weight: bold !important;
+  color: #ffc4c8;
+  text-shadow: 1px 1px 1px #1a0f15;
+}
+.modal-body {
+  color: #1a0f15;
+  font-weight: bold !important;
+  font-family: "Roboto", sans-serif !important;
+  letter-spacing: 0.5px;
+}
+.modal-body p {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  text-transform: uppercase !important;
+}
+.modal-body-footer {
+  justify-content: center !important;
+}
+.modal-body-close-btn {
+  box-shadow: 2px 2px 6px 0px #b53b74;
+  background-color: #ffc4c8 !important;
+  width: 40% !important;
+  color: #603d51 !important;
+  font-weight: bold !important;
+  border-radius: 10px !important;
+  text-transform: uppercase !important;
+}
+.modal-body-close-btn:hover {
+  box-shadow: inset 0px 0px 6px 0px #3d2935;
+  width: 40% !important;
+  color: #1a0f15;
+  font-weight: bold !important;
+  background-color: #8feeb5 !important;
+}
+
+/* ********* BUTTONS ********* */
+.small__btn {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 2px 2px 6px 0px #b53b74;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+.small__btn:hover {
+  background-color: #8feeb5 !important;
+  box-shadow: inset 0px 0px 6px 0px #3d2935;
+}
+
+.big__btn {
+  box-shadow: 2px 2px 6px 0px #b53b74;
+  background-color: #ffc4c8 !important;
+  width: 40% !important;
+  color: #603d51 !important;
+  font-weight: bold !important;
+  border-radius: 10px !important;
+  text-transform: uppercase !important;
+}
+.big__btn:hover {
+  box-shadow: inset 0px 0px 6px 0px #3d2935;
+  width: 40% !important;
+  color: #1a0f15;
+  font-weight: bold !important;
+  background-color: #8feeb5 !important;
+}
+
+.dice__img {
+  height: 30px;
+  width: 30px;
+  border-radius: 10px !important;
+  box-shadow: 0px 0px 6px 0px #b53b74;
+}
+
+.audio {
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.audio__checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.audio__label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0px 0px 2px 0px #3d2935;
+  border-radius: 20px !important;
+}
+.audio__inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.audio__inner:before, .audio__inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 32px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: bold !important;
+  box-sizing: border-box;
+}
+.audio__inner:before {
+  content: "ON";
+  padding-right: 15px;
+  background-color: #8feeb5;
+  color: #1a0f15;
+}
+.audio__inner:after {
+  content: "OFF";
+  padding-right: 20px;
+  background-color: #eb1313;
+  color: #1a0f15;
+  text-align: right;
+}
+.audio__switch {
+  display: block;
+  width: 30px;
+  margin: 0px;
+  background: #ffc4c8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0px 0px 6px 0px #b53b74;
+  border-radius: 20px !important;
+  transition: all 0.3s ease-in 0s;
+}
+
+.audio__checkbox:checked + .audio__label .audio__inner {
+  margin-left: 0;
+}
+
+.audio__checkbox:checked + .audio__label .audio__switch {
+  right: 0px;
+}
+
 /* ********* WRAPPER ********* */
 .wrapper {
   height: 100%;
@@ -576,16 +690,15 @@ body {
   flex-shrink: 0;
   flex-grow: 0;
   background: linear-gradient(to top, #ee8fc8, #d74389);
-  box-shadow: inset 0px 0px 6px 0px #3d2935 !important;
+  box-shadow: inset 0px 0px 6px 0px #3d2935;
 }
 
-/* ********* END ********* */
 /* ********* MENU ********* */
 .menu {
   position: fixed;
   height: 100%;
   background: linear-gradient(to top, #ee8fc8, #d74389);
-  box-shadow: inset 0px 0px 6px 0px #3d2935 !important;
+  box-shadow: inset 0px 0px 6px 0px #3d2935;
   z-index: 10;
   display: flex;
   flex-direction: row;
@@ -597,29 +710,12 @@ body {
 }
 .menu__logo-image {
   height: 5rem;
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5)) !important;
 }
 .menu__game-name {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Gloria Hallelujah", cursive !important;
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: bold !important;
   color: #ffc4c8;
-  text-shadow: 1px 1px 1px #000000;
-}
-.menu__btn {
-  box-shadow: 2px 2px 6px 0px #b53b74 !important;
-  background-color: #ffc4c8 !important;
-  width: 40%;
-  color: #603d51 !important;
-  font-weight: bold !important;
-  border-radius: 10px !important;
-}
-.menu__btn:hover {
-  box-shadow: inset 0px 0px 6px 0px #3d2935 !important;
-  width: 40%;
-  color: #1a0f15 !important;
-  font-weight: bold !important;
-  background-color: #8feeb5 !important;
-}
-
-/* ********* END ********* *//*# sourceMappingURL=main.css.map */
+  text-shadow: 1px 1px 1px #1a0f15;
+}/*# sourceMappingURL=main.css.map */
