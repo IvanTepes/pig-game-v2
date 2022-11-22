@@ -56,24 +56,55 @@ $base-url: '/assets/' !default;
 // ! Main Variables
 
 // ! Main Menu
-// Fonts
-$game-name-font: 'Gloria Hallelujah', cursive;
-$game-font: 'Roboto', sans-serif;
 
-//Colours
-$main-pink: #ffc4c8;
-$main-green: #8feeb5;
+// Fonts
+$font__title-font: 'Gloria Hallelujah', cursive !important;
+$font__text-font: 'Roboto', sans-serif !important;
+$font__weight-bold: bold !important;
+$font__uppercase: uppercase !important;
 
 // Border
-$border-radius: 10px;
-$game-btn-border: 1px solid rgba(255, 255, 255, 0.18);
+$border__10: 10px !important;
+$border__20: 20px !important;
 
 // Colours
-$game-btn-color: rgba(255, 255, 255, 0.25);
-$background-color: linear-gradient(to top, #ee8fc8, #d74389);
+$colour__pink: #ffc4c8;
+$colour__plum: #ee8fc8;
+$colour__pale-violet: #d74389;
+$colour__medium-violet: #b53b74;
+$colour__red: #eb1313;
+$colour__dime-gray: #603d51;
+$colour__dark-slategray: #3d2935;
+$colour__dark-gray: #1a0f15;
+$colour__pale-green: #8feeb5;
+
+$colour__background: linear-gradient(
+    to top,
+    $colour__plum,
+    $colour__pale-violet
+);
+
+$colour__transparent-025: rgba(255, 255, 255, 0.25);
+$colour__transparent-018: rgba(255, 255, 255, 0.18);
+
+// Buttons
+$btn-small__bg-colour: $colour__transparent-025 !important;
+$btn-small__border: 1px solid $colour__transparent-018 !important;
+
+// Border
+$border__box-border: $btn-small__border;
 
 // Shadows
-$inset-shadow: inset 0px 0px 6px 0px #3d2935 !important;
-$btn-shadow: 2px 2px 6px 0px #b53b74 !important;
+$shadow__inset: inset 0px 0px 6px 0px $colour__dark-slategray;
+$shadow__btn: 2px 2px 6px 0px $colour__medium-violet;
+$shadow__modal: 0px 0px 2px 0px $colour__dark-slategray;
+$shadow__text: 1px 1px 1px $colour__dark-gray;
+$shadow__box: 0px 0px 6px 0px $colour__medium-violet;
 
-// Menu style
+// Filters
+$filter__blur-4: blur(4px) !important;
+$filter__blur-7: blur(7px) !important;
+$filter__drop-shadow: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5)) !important;
+
+// Widths
+$width__40: 40% !important;
