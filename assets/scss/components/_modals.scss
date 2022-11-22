@@ -1,0 +1,37 @@
+// ! Modals
+
+/* ********* MODAL ********* */
+
+.modal {
+    backdrop-filter: $filter__blur-4;
+    -webkit-backdrop-filter: $filter__blur-4;
+    &-content {
+        background-color: $colour__pale-violet !important;
+        box-shadow: $shadow__modal;
+    }
+    &-title {
+        font-family: $font__title-font;
+        text-transform: $font__uppercase;
+        font-size: 1.65rem;
+        font-weight: $font__weight-bold;
+        color: $colour__pink;
+        text-shadow: $shadow__text;
+    }
+    &-body {
+        color: $colour__dark-gray;
+        font-weight: $font__weight-bold;
+        font-family: $font__text-font;
+        letter-spacing: 0.5px;
+        & p {
+            margin-top: 10px !important;
+            margin-bottom: 10px !important;
+            text-transform: $font__uppercase;
+        }
+        &-footer {
+            justify-content: center !important;
+        }
+        &-close-btn {
+            @include big-btn;
+        }
+    }
+}
