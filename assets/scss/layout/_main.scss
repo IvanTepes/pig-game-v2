@@ -5,13 +5,13 @@
 .main {
     width: 90% !important;
     &__player {
-        background-color: rgba(255, 255, 255, 0.25) !important;
-        box-shadow: 2px 2px 6px 0px #b53b74 !important;
-        backdrop-filter: blur(4px) !important;
-        -webkit-backdrop-filter: blur(4px) !important;
-        border-radius: 10px !important;
-        border: 1px solid rgba(255, 255, 255, 0.18) !important;
-        margin: 1rem 0.5rem !important;
+        background-color: $colour__transparent-025;
+        box-shadow: $shadow__box;
+        backdrop-filter: $filter__blur-4;
+        -webkit-backdrop-filter: $filter__blur-4;
+        border-radius: $border__10;
+        border: $border__box-border;
+        // margin: 1rem 0.5rem;
         @include flexbox(
             $display: flex,
             $justifyContent: center,
@@ -20,7 +20,7 @@
         );
         &-name {
             font-size: 1.5rem;
-            font-family: $game-font;
+            font-family: $font__text-font;
         }
         &-score {
             font-size: 1.8rem;
@@ -29,12 +29,12 @@
 
     &__current {
         background: rgba(255, 255, 255, 0);
-        box-shadow: $btn-shadow;
-        backdrop-filter: blur(7.5px);
-        -webkit-backdrop-filter: blur(7.5px);
-        font-family: $game-font;
-        border-radius: $border-radius;
-        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: $shadow__btn;
+        backdrop-filter: $filter__blur-7;
+        -webkit-backdrop-filter: $filter__blur-7;
+        font-family: $font__text-font;
+        border-radius: $border__10;
+        border: $border__box-border;
         width: auto !important;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
@@ -48,8 +48,8 @@
     }
 
     &__controls {
-        margin-top: 0.5rem !important;
-        margin-bottom: 0.5rem;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
 
         &-col--dice {
             margin-left: 33.3%;
@@ -58,8 +58,8 @@
                 height: 3rem;
                 margin-top: 0.5rem;
                 margin-bottom: 0.5rem;
-                box-shadow: 2px 2px 6px 0px #b53b74 !important;
-                border-radius: 10px;
+                box-shadow: $shadow__btn;
+                border-radius: $border__10;
             }
         }
 
@@ -71,8 +71,6 @@
         }
 
         &-btn {
-            @include small-btn-style;
-
             &--hold {
                 background: url(/pig-game-v2/assets/img/icons/dark/save.svg)
                     no-repeat;
@@ -96,5 +94,3 @@
         }
     }
 }
-
-/* ********* END ********* */
