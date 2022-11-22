@@ -90,11 +90,34 @@
 }
 
 /* It's a mixin that can be used to set the style of a small button. */
-@mixin small-btn-style {
-    background-color: $game-btn-color !important;
-    box-shadow: $btn-shadow;
-    backdrop-filter: blur(4px) !important;
-    -webkit-backdrop-filter: blur(4px) !important;
-    border-radius: $border-radius !important;
-    border: $game-btn-border !important;
+@mixin small-btn {
+    background-color: $btn-small__bg-colour;
+    box-shadow: $shadow__btn;
+    backdrop-filter: $filter__blur-4;
+    -webkit-backdrop-filter: $filter__blur-4;
+    border-radius: $border__10;
+    border: $btn-small__border;
+
+    &:hover {
+        background-color: $colour__pale-green !important;
+        box-shadow: $shadow__inset;
+    }
+}
+
+@mixin big-btn {
+    box-shadow: $shadow__btn;
+    background-color: $colour__pink !important;
+    width: $width__40;
+    color: $colour__dime-gray !important;
+    font-weight: $font__weight-bold;
+    border-radius: $border__10;
+    text-transform: $font__uppercase;
+
+    &:hover {
+        box-shadow: $shadow__inset;
+        width: $width__40;
+        color: $colour__dark-gray;
+        font-weight: $font__weight-bold;
+        background-color: $colour__pale-green !important;
+    }
 }
