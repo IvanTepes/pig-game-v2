@@ -1,20 +1,18 @@
 'use strict';
 
-const scoreInput = document.querySelector('.footer__max-score--input');
-const wrapper = document.querySelector('.wrapper');
+/* Selecting the elements from the HTML file. */
+const menuNewBtn = document.querySelector('.js__new-game');
+const mainMenu = document.querySelector('.menu');
+const backBtn = document.querySelector('.footer__btn');
 
-console.log(scoreInput);
+/* Adding an event listener to the menuNewBtn element. When the button is clicked, the mainMenu element
+will have the class visually-hidden added to it. */
+menuNewBtn.addEventListener('click', function () {
+    mainMenu.classList.add('visually-hidden');
+});
 
-scoreInput.addEventListener('focusin', focusInFunction);
-scoreInput.addEventListener('focusout', focusOutFunction);
-
-function focusInFunction() {
-    wrapper.style.height = 'auto';
-    document.documentElement.style.height = 'auto';
-    document.body.style.height = 'auto';
-}
-function focusOutFunction() {
-    wrapper.style.height = '';
-    document.documentElement.style.height = '';
-    document.body.style.height = '';
-}
+/* Adding an event listener to the backBtn element. When the button is clicked, the mainMenu element
+will have the class visually-hidden removed from it. */
+backBtn.addEventListener('click', function () {
+    mainMenu.classList.remove('visually-hidden');
+});
