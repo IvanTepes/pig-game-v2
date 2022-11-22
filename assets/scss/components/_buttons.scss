@@ -1,0 +1,11 @@
+// ! Modals
+
+/* ********* BUTTONS ********* */
+
+.small__btn {
+    @include small-btn;
+}
+
+.big__btn {
+    @include big-btn;
+}
