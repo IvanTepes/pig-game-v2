@@ -4,6 +4,7 @@
 
 .main {
     width: 90% !important;
+
     &__player {
         background-color: $colour__transparent-025;
         box-shadow: $shadow__box;
@@ -11,20 +12,22 @@
         -webkit-backdrop-filter: $filter__blur-4;
         border-radius: $border__10;
         border: $border__box-border;
-        // margin: 1rem 0.5rem;
+
         @include flexbox(
             $display: flex,
             $justifyContent: center,
             $shrink: none,
             $wrap: wrap
         );
-        &-name {
-            font-size: 1.5rem;
-            font-family: $font__text-font;
-        }
-        &-score {
-            font-size: 1.8rem;
-        }
+    }
+
+    &__name {
+        font-size: 1.5rem;
+        font-family: $font__text-font;
+    }
+
+    &__score {
+        font-size: 1.8rem;
     }
 
     &__current {
@@ -39,10 +42,10 @@
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
 
-        &-label {
+        &--label {
             margin-bottom: 0;
         }
-        &-score {
+        &--score {
             margin-bottom: 0;
         }
     }
@@ -51,46 +54,36 @@
         margin-top: 1rem !important;
         margin-bottom: 1rem !important;
 
-        &-col--dice {
+        &--dice-col {
             margin-left: 33.3%;
-
-            &-img {
-                height: 3rem;
-                margin-top: 0.5rem;
-                margin-bottom: 0.5rem;
-                box-shadow: $shadow__btn;
-                border-radius: $border__10;
-            }
         }
-
-        &-col--hold {
+        &--dice-img {
+            height: 3rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            box-shadow: $shadow__btn;
+            border-radius: $border__10;
+        }
+        &--hold-col {
             align-self: center;
             display: flex;
             align-items: center;
             justify-content: flex-end;
         }
-
-        &-btn {
-            &--hold {
-                background: url(/pig-game-v2/assets/img/icons/dark/save.svg)
-                    no-repeat;
-                @include icon-size;
-            }
+        &--hold-icon {
+            background: url(/pig-game-v2/assets/img/icons/dark/save.svg)
+                no-repeat;
         }
     }
-}
 
-@media (orientation: landscape) {
-    .main {
-        display: flex;
-        justify-content: space-evenly;
-        &__controls {
-            display: flex;
-            flex-direction: column;
-            margin: 0 1rem !important;
-            &-col--dice {
-                margin-left: 0px !important;
-            }
+    &__roll-dice {
+        position: absolute;
+        right: 5%;
+        top: 33%;
+
+        &--icon {
+            background: url(/pig-game-v2/assets/img/icons/dark/dice.svg)
+                no-repeat;
         }
     }
 }
