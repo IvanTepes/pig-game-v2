@@ -3,8 +3,9 @@
 * A mixin to rule complex flexbox layout
 * @author nicolacastellanidev@gmail.com
 */
-/* It's a mixin that can be used to set the size of an icon. */
 /* It's a mixin that can be used to set the style of a small button. */
+/* It's a mixin that can be used to set the style of a big button. */
+/* It's a mixin that can be used to set the size of an btn icon. */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -412,27 +413,31 @@ body {
 }
 
 /* ********* HEADER ********* */
-.header__btn--rules-icon, .header__btn--new-icon, .header__btn--settings-icon {
-  float: left;
-  height: 30px;
-  width: 30px;
+.header__rules {
+  background: url(/pig-game-v2/assets/img/icons/dark/question.svg) no-repeat;
 }
-.header__btn--rules-icon {
-  background: url(/pig-game-v2/assets/img/icons/dark/question-mark.svg) no-repeat;
-}
-.header__btn--new-icon {
+.header__new-game {
   background: url(/pig-game-v2/assets/img/icons/dark/repeat.svg) no-repeat;
 }
-.header__btn--settings-icon {
+.header__settings {
   background: url(/pig-game-v2/assets/img/icons/dark/cog.svg) no-repeat;
 }
 
 /* ********* FOOTER ********* */
-.footer__btn--back {
-  background: url(assets/img/icons/dark/back-arrow.svg) no-repeat;
-  float: left;
-  height: 30px;
-  width: 30px;
+.footer__row {
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+}
+.footer__row p {
+  margin-bottom: 0;
+}
+.footer__back {
+  background: url(/pig-game-v2/assets/img/icons/dark/back-arrow.svg) no-repeat;
+}
+.footer__dice--icon {
+  background: url(/pig-game-v2/assets/img/icons/dark/dice.svg) no-repeat;
 }
 
 /* ********* MAIN ********* */
@@ -453,11 +458,11 @@ body {
   flex-shrink: none;
   flex-grow: 0;
 }
-.main__player-name {
+.main__name {
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif !important;
 }
-.main__player-score {
+.main__score {
   font-size: 1.8rem;
 }
 .main__current {
@@ -472,53 +477,44 @@ body {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.main__current-label {
+.main__current--label {
   margin-bottom: 0;
 }
-.main__current-score {
+.main__current--score {
   margin-bottom: 0;
 }
 .main__controls {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
 }
-.main__controls-col--dice {
+.main__controls--dice-col {
   margin-left: 33.3%;
 }
-.main__controls-col--dice-img {
+.main__controls--dice-img {
   height: 3rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   box-shadow: 2px 2px 6px 0px #b53b74;
   border-radius: 10px !important;
 }
-.main__controls-col--hold {
+.main__controls--hold-col {
   align-self: center;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-.main__controls-btn--hold {
+.main__controls--hold-icon {
   background: url(/pig-game-v2/assets/img/icons/dark/save.svg) no-repeat;
-  float: left;
-  height: 30px;
-  width: 30px;
+}
+.main__roll-dice {
+  position: absolute;
+  right: 5%;
+  top: 33%;
+}
+.main__roll-dice--icon {
+  background: url(/pig-game-v2/assets/img/icons/dark/dice.svg) no-repeat;
 }
 
-@media (orientation: landscape) {
-  .main {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .main__controls {
-    display: flex;
-    flex-direction: column;
-    margin: 0 1rem !important;
-  }
-  .main__controls-col--dice {
-    margin-left: 0px !important;
-  }
-}
 /* ********* MODAL ********* */
 .modal {
   backdrop-filter: blur(4px) !important;
@@ -550,25 +546,9 @@ body {
 .modal-body-footer {
   justify-content: center !important;
 }
-.modal-body-close-btn {
-  box-shadow: 2px 2px 6px 0px #b53b74;
-  background-color: #ffc4c8 !important;
-  width: 40% !important;
-  color: #603d51 !important;
-  font-weight: bold !important;
-  border-radius: 10px !important;
-  text-transform: uppercase !important;
-}
-.modal-body-close-btn:hover {
-  box-shadow: inset 0px 0px 6px 0px #3d2935;
-  width: 40% !important;
-  color: #1a0f15;
-  font-weight: bold !important;
-  background-color: #8feeb5 !important;
-}
 
 /* ********* BUTTONS ********* */
-.small__btn {
+.btn__small {
   background-color: rgba(255, 255, 255, 0.25) !important;
   box-shadow: 2px 2px 6px 0px #b53b74;
   backdrop-filter: blur(4px) !important;
@@ -576,12 +556,12 @@ body {
   border-radius: 10px !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
-.small__btn:hover {
+.btn__small:hover {
   background-color: #8feeb5 !important;
   box-shadow: inset 0px 0px 6px 0px #3d2935;
 }
 
-.big__btn {
+.btn__big {
   box-shadow: 2px 2px 6px 0px #b53b74;
   background-color: #ffc4c8 !important;
   width: 40% !important;
@@ -590,7 +570,7 @@ body {
   border-radius: 10px !important;
   text-transform: uppercase !important;
 }
-.big__btn:hover {
+.btn__big:hover {
   box-shadow: inset 0px 0px 6px 0px #3d2935;
   width: 40% !important;
   color: #1a0f15;
@@ -598,13 +578,21 @@ body {
   background-color: #8feeb5 !important;
 }
 
-.dice__img {
+.btn__icon {
+  float: left;
+  height: 30px;
+  width: 30px;
+}
+
+/* ********* CAROUSEL ********* */
+.carousel__dice {
   height: 30px;
   width: 30px;
   border-radius: 10px !important;
   box-shadow: 0px 0px 6px 0px #b53b74;
 }
 
+/* ********* AUDIO SWITCH ********* */
 .audio {
   position: relative;
   width: 90px;
@@ -718,4 +706,31 @@ body {
   font-weight: bold !important;
   color: #ffc4c8;
   text-shadow: 1px 1px 1px #1a0f15;
+  margin-bottom: 0.5rem;
+}
+
+/* ********* MEDIA QUERIES ********* */
+.roll-dice__landscape {
+  display: none;
+}
+
+@media (orientation: landscape) {
+  .main {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .main__controls {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem !important;
+  }
+  .main__controls--dice-col {
+    margin-left: 0px !important;
+  }
+  .roll-dice__portrait {
+    display: none !important;
+  }
+  .roll-dice__landscape {
+    display: block !important;
+  }
 }/*# sourceMappingURL=main.css.map */
