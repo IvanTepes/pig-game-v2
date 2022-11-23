@@ -3,7 +3,7 @@
 /* Selecting the elements from the HTML file. */
 const menuNewBtn = document.querySelector('.js__new-game');
 const mainMenu = document.querySelector('.menu');
-const backBtn = document.querySelector('.footer__btn');
+const backBtn = document.querySelector('#js__back-btn');
 
 /* Adding an event listener to the menuNewBtn element. When the button is clicked, the mainMenu element
 will have the class visually-hidden added to it. */
