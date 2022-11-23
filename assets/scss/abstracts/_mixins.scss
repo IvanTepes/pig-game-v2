@@ -82,15 +82,8 @@
     flex-grow: $grow;
 }
 
-/* It's a mixin that can be used to set the size of an icon. */
-@mixin icon-size {
-    float: left;
-    height: 30px;
-    width: 30px;
-}
-
 /* It's a mixin that can be used to set the style of a small button. */
-@mixin small-btn {
+@mixin btn__style--small {
     background-color: $btn-small__bg-colour;
     box-shadow: $shadow__btn;
     backdrop-filter: $filter__blur-4;
@@ -104,7 +97,8 @@
     }
 }
 
-@mixin big-btn {
+/* It's a mixin that can be used to set the style of a big button. */
+@mixin btn__style--big {
     box-shadow: $shadow__btn;
     background-color: $colour__pink !important;
     width: $width__40;
@@ -120,4 +114,11 @@
         font-weight: $font__weight-bold;
         background-color: $colour__pale-green !important;
     }
+}
+
+/* It's a mixin that can be used to set the size of an btn icon. */
+@mixin btn__icon--size {
+    float: left;
+    height: 30px;
+    width: 30px;
 }
