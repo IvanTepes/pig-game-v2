@@ -3,8 +3,25 @@
 /* ********* FOOTER ********* */
 
 .footer {
-    &__btn--back {
-        background: url(assets/img/icons/dark/back-arrow.svg) no-repeat;
-        @include icon-size;
+    &__row {
+        display: flex;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+        & p {
+            margin-bottom: 0;
+        }
+    }
+
+    &__back {
+        background: url(/pig-game-v2/assets/img/icons/dark/back-arrow.svg)
+            no-repeat;
+    }
+
+    &__dice {
+        &--icon {
+            background: url(/pig-game-v2/assets/img/icons/dark/dice.svg)
+                no-repeat;
+        }
     }
 }
