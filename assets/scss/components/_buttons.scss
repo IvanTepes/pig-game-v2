@@ -2,10 +2,14 @@
 
 /* ********* BUTTONS ********* */
 
-.small__btn {
-    @include small-btn;
+.btn__small {
+    @include btn__style--small;
 }
 
-.big__btn {
-    @include big-btn;
+.btn__big {
+    @include btn__style--big;
+}
+
+.btn__icon {
+    @include btn__icon--size;
 }
