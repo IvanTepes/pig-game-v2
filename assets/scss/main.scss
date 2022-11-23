@@ -13,7 +13,7 @@
 @import 'layout/header', 'layout/footer', 'layout/main';
 
 // 5. Components
-@import 'components/modals', 'components/buttons', 'components/carousel-dice',
+@import 'components/modals', 'components/buttons', 'components/carousel',
     'components/audio-switch';
 
 // 6. Page-specific styles
@@ -21,3 +21,6 @@
 
 // 7. Themes
 @import 'themes/default';
+
+// 8. Media queries
+@import 'media-queries/media-queries';
