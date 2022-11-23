@@ -1,0 +1,67 @@
+// ! Media Queries
+
+/* ********* MEDIA QUERIES ********* */
+
+.roll-dice__landscape {
+    display: none;
+}
+
+@media (orientation: landscape) {
+    .main {
+        display: flex;
+        justify-content: space-evenly;
+        &__controls {
+            display: flex;
+            flex-direction: column;
+            margin: 0 1rem !important;
+            &--dice-col {
+                margin-left: 0px !important;
+            }
+        }
+    }
+
+    .roll-dice__portrait {
+        display: none !important;
+    }
+
+    .roll-dice__landscape {
+        display: block !important;
+    }
+}
+
+// @media only screen and (max-height: 480px) and (orientation: portrait) {
+//     .main__player-name {
+//         font-size: 0.5rem;
+//     }
+
+//     .btn__icon {
+//         height: 20px;
+//         width: 20px;
+//     }
+// }
+
+// /* ----------- iPhone 4 and 4S ----------- */
+
+// @media only screen and (max-height: 320px) and (orientation: landscape) {
+//     .menu__logo-image {
+//         height: 4rem !important;
+//     }
+//     .menu__game-name {
+//         font-size: 1.5rem !important;
+//     }
+//     .btn__big {
+//         font-size: 0.7rem !important;
+//     }
+// }
+
+// @media only screen and (max-height: 568px) and (orientation: portrait) {
+//     .menu__logo-image {
+//         height: 4rem !important;
+//     }
+//     .menu__game-name {
+//         font-size: 1.5rem !important;
+//     }
+//     .btn__big {
+//         font-size: 0.7rem !important;
+//     }
+// }
