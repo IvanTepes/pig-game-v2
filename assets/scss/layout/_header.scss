@@ -3,24 +3,16 @@
 /* ********* HEADER ********* */
 
 .header {
-    &__btn {
-        &--rules-icon,
-        &--new-icon,
-        &--settings-icon {
-            @include icon-size;
-        }
+    &__rules {
+        background: url(/pig-game-v2/assets/img/icons/dark/question.svg)
+            no-repeat;
+    }
 
-        &--rules-icon {
-            background: url(/pig-game-v2/assets/img/icons/dark/question-mark.svg)
-                no-repeat;
-        }
-        &--new-icon {
-            background: url(/pig-game-v2/assets/img/icons/dark/repeat.svg)
-                no-repeat;
-        }
-        &--settings-icon {
-            background: url(/pig-game-v2/assets/img/icons/dark/cog.svg)
-                no-repeat;
-        }
+    &__new-game {
+        background: url(/pig-game-v2/assets/img/icons/dark/repeat.svg) no-repeat;
+    }
+
+    &__settings {
+        background: url(/pig-game-v2/assets/img/icons/dark/cog.svg) no-repeat;
     }
 }
