@@ -24,10 +24,13 @@
     &__name {
         font-size: 1.5rem;
         font-family: $font__text-font;
+        text-transform: uppercase;
+        color: #363636;
     }
 
     &__score {
         font-size: 1.8rem;
+        color: #363636;
     }
 
     &__current {
@@ -44,9 +47,12 @@
 
         &--label {
             margin-bottom: 0;
+            text-transform: uppercase;
+            color: #363636;
         }
         &--score {
             margin-bottom: 0;
+            color: #363636;
         }
     }
 
