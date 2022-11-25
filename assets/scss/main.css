@@ -412,6 +412,11 @@ body {
   width: 1px;
 }
 
+.g-2 {
+  --bs-gutter-y: 0.7rem !important;
+  --bs-gutter-x: 0 !important;
+}
+
 /* ********* HEADER ********* */
 .header__rules {
   background: url(/pig-game-v2/assets/img/icons/dark/question.svg) no-repeat;
@@ -461,9 +466,12 @@ body {
 .main__name {
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif !important;
+  text-transform: uppercase;
+  color: #363636;
 }
 .main__score {
   font-size: 1.8rem;
+  color: #363636;
 }
 .main__current {
   background: rgba(255, 255, 255, 0);
@@ -479,9 +487,12 @@ body {
 }
 .main__current--label {
   margin-bottom: 0;
+  text-transform: uppercase;
+  color: #363636;
 }
 .main__current--score {
   margin-bottom: 0;
+  color: #363636;
 }
 .main__controls {
   margin-top: 1rem !important;
@@ -714,6 +725,7 @@ body {
   display: none;
 }
 
+/* A media query that is only applied when the device is in landscape mode. */
 @media (orientation: landscape) {
   .main {
     display: flex;
@@ -727,10 +739,354 @@ body {
   .main__controls--dice-col {
     margin-left: 0px !important;
   }
+  /* Hiding the dice image when the screen is in portrait mode. */
   .roll-dice__portrait {
     display: none !important;
   }
+  /* Making the dice image visible when the screen is in landscape mode. */
   .roll-dice__landscape {
     display: block !important;
+  }
+}
+/* This is a media query that is only applied when the device is in portrait mode and the height is
+less than 480px. */
+@media only screen and (max-height: 480px) and (orientation: portrait) {
+  .btn__icon {
+    float: left;
+    height: 15px;
+    width: 15px;
+  }
+  .main__name {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+  }
+  .main__score {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .main__current {
+    margin-bottom: 0.6rem;
+  }
+  .main__current--label {
+    font-size: 0.7rem;
+    margin-bottom: 0;
+  }
+}
+/* This is a media query that is only applied when the device is in portrait mode and the height is
+greater than 480px. */
+@media only screen and (min-height: 480px) and (orientation: portrait) {
+  .btn__icon {
+    float: left;
+    height: 20px;
+    width: 20px;
+  }
+  .main__name {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+  }
+  .main__score {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .main__current {
+    margin-bottom: 0.4rem;
+  }
+  .main__current--label {
+    font-size: 0.7rem;
+    margin-bottom: 0;
+  }
+  .main__controls--dice-img {
+    height: 2.3rem;
+  }
+}
+/* This is a media query that is only applied when the device is in portrait mode and the height is
+greater than 568px. */
+@media only screen and (min-height: 568px) and (orientation: portrait) {
+  .btn__icon {
+    float: left;
+    height: 24px;
+    width: 24px;
+  }
+  .main__name {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .main__score {
+    font-size: 1.8rem;
+    margin-bottom: 0.7rem;
+  }
+  .main__current {
+    margin-bottom: 0.6rem;
+  }
+  .main__current--label {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  .main__controls--dice-img {
+    height: 2.7rem;
+  }
+}
+/* This is a media query that is only applied when the device is in portrait mode and the height is
+greater than 640px. */
+@media only screen and (min-height: 640px) and (orientation: portrait) {
+  .btn__icon {
+    float: left;
+    height: 30px;
+    width: 30px;
+  }
+  .main__name {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .main__score {
+    font-size: 2.1rem;
+    margin-bottom: 0.9rem;
+  }
+  .main__current {
+    margin-bottom: 0.9rem;
+  }
+  .main__current--label {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+  .main__controls--dice-img {
+    height: 3rem;
+  }
+}
+/* This is a media query that is only applied when the device is in landscape mode and the width is
+less than 320px. */
+@media only screen and (max-width: 320px) and (orientation: landscape) {
+  .btn__icon {
+    float: left;
+    height: 18px;
+    width: 18px;
+  }
+  .main__name {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+  .main__score {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .main__current {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.6rem;
+    width: 80% !important;
+  }
+  .main__current--label {
+    font-size: 0.7rem;
+    margin-bottom: 0;
+  }
+  .main__current--score {
+    margin-bottom: 0;
+    font-size: 0.7rem;
+  }
+  .main__controls--dice-img {
+    height: 2.5rem;
+  }
+}
+/* This is a media query that is only applied when the device is in landscape mode and the width is
+greater than 320px and less than 480px. */
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+  .btn__icon {
+    float: left;
+    height: 20px;
+    width: 20px;
+  }
+  .main__name {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+  .main__score {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .main__current {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.6rem;
+  }
+  .main__current--label {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+  .main__controls--dice-img {
+    height: 2.5rem;
+  }
+}
+/* This is a media query that is only applied when the device is in landscape mode and the width is
+greater than 480px and less than 768px. */
+@media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  .btn__icon {
+    float: left;
+    height: 25px;
+    width: 25px;
+  }
+  .main__name {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+  .main__score {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .main__current {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.6rem;
+  }
+  .main__current--label {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+  .main__controls--dice-img {
+    height: 2.5rem;
+  }
+}
+/* This is a media query that is only applied when the device is in landscape mode and the width is
+greater than 768px and less than 1024px. */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .btn__icon {
+    float: left;
+    height: 30px;
+    width: 30px;
+  }
+  .main__name {
+    font-size: 1.5;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .main__score {
+    font-size: 1.8;
+    margin-bottom: 1rem;
+  }
+  .main__current {
+    margin-bottom: 1.7rem;
+  }
+  .main__current--label {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+  .main__current--score {
+    margin-bottom: 0;
+    font-size: 1.3rem;
+  }
+  .main__controls--dice-img {
+    height: 3.5rem;
+    margin-top: 1.6rem;
+  }
+}
+/* This is a media query that is only applied when the device is in landscape mode and the width is
+greater than 1025px and less than 1280px. */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) and (orientation: landscape) {
+  .btn__icon {
+    float: left;
+    height: 30px;
+    width: 30px;
+  }
+  .main__name {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .main__score {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .main__current {
+    margin-bottom: 1.7rem;
+  }
+  .main__current--label {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+  .main__current--score {
+    margin-bottom: 0;
+    font-size: 1.3rem;
+  }
+  .main__controls--dice-img {
+    height: 3.5rem;
+    margin-top: 1.6rem;
+  }
+}
+/* This is a media query that is only applied when the device is in landscape mode and the width is
+greater than 1281px and less than 1440px. */
+@media only screen and (min-width: 1281px) and (max-width: 1440px) and (orientation: landscape) {
+  .btn__icon {
+    float: left;
+    height: 35px;
+    width: 35px;
+  }
+  .main__player {
+    width: 43%;
+  }
+  .main__name {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 5.5rem;
+  }
+  .main__score {
+    font-size: 3.5rem;
+    margin-bottom: 5.5rem;
+  }
+  .main__current {
+    margin-bottom: 1.7rem;
+  }
+  .main__current--label {
+    font-size: 1.7rem;
+    margin-bottom: 0;
+  }
+  .main__current--score {
+    font-size: 1.7rem;
+    margin-bottom: 0;
+  }
+  .main__controls--dice-img {
+    height: 4rem;
+    margin-top: 1.6rem;
+  }
+}
+/* This is a media query that is only applied when the device is in landscape mode and the width is
+greater than 1441px and less than 2560px. */
+@media only screen and (min-width: 1441px) and (orientation: landscape) {
+  .btn__icon {
+    float: left;
+    height: 40px;
+    width: 40px;
+  }
+  .main__player {
+    width: 43%;
+  }
+  .main__name {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .main__score {
+    font-size: 5.5rem;
+    margin-bottom: 5.5rem;
+  }
+  .main__current {
+    margin-bottom: 1.7rem;
+  }
+  .main__current--label {
+    font-size: 1.7rem;
+    margin-bottom: 0;
+  }
+  .main__current--score {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+  .main__controls--dice-img {
+    height: 5rem;
+    margin-top: 2.6rem;
   }
 }/*# sourceMappingURL=main.css.map */
