@@ -22,14 +22,17 @@
     }
 
     &__name {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-family: $font__text-font;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
         text-transform: uppercase;
         color: #363636;
     }
 
     &__score {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.7rem;
         color: #363636;
     }
 
@@ -42,29 +45,30 @@
         border-radius: $border__10;
         border: $border__box-border;
         width: auto !important;
-        margin-top: 0.5rem;
+        // margin-top: 0.5rem;
         margin-bottom: 0.5rem;
 
         &--label {
+            font-size: 0.7rem;
             margin-bottom: 0;
             text-transform: uppercase;
             color: #363636;
         }
         &--score {
+            font-size: 0.7rem;
             margin-bottom: 0;
             color: #363636;
         }
     }
 
     &__controls {
-        margin-top: 1rem !important;
-        margin-bottom: 1rem !important;
-
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
         &--dice-col {
             margin-left: 33.3%;
         }
         &--dice-img {
-            height: 3rem;
+            height: 2rem;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
             box-shadow: $shadow__btn;
@@ -77,8 +81,7 @@
             justify-content: flex-end;
         }
         &--hold-icon {
-            background: url(/pig-game-v2/assets/img/icons/dark/save.svg)
-                no-repeat;
+            background: url(/assets/img/icons/dark/save.svg) no-repeat;
         }
     }
 
@@ -88,8 +91,7 @@
         top: 33%;
 
         &--icon {
-            background: url(/pig-game-v2/assets/img/icons/dark/dice.svg)
-                no-repeat;
+            background: url(/assets/img/icons/dark/dice.svg) no-repeat;
         }
     }
 }
