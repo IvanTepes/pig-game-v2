@@ -208,24 +208,24 @@
     }
 
     .btn__icon {
-        height: 30px;
-        width: 30px;
+        height: 26px;
+        width: 26px;
     }
 
     .main__name {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
     }
 
     .main__score {
-        font-size: 2.5rem;
-        margin-bottom: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
     }
 
     .main__current--label,
     .main__current--score {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 
     .main__current {
@@ -233,7 +233,7 @@
     }
 
     .main__controls--dice-img {
-        height: 3rem;
+        height: 2.5rem;
     }
 }
 @media (min-width: 801px) and (max-width: 900px) and (orientation: landscape) {
