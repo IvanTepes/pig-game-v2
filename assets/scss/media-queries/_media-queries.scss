@@ -119,22 +119,22 @@
     }
 
     .main__name {
-        font-size: 2rem;
+        font-size: 1.7rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
     }
 
     .main__score {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .main__current--label,
     .main__current--score {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .main__controls--dice-img {
-        height: 3.5rem;
+        height: 3rem;
     }
 
     .main__controls {
@@ -205,5 +205,89 @@
 
     .menu__game-name {
         background-color: purple;
+    }
+
+    .btn__icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .main__name {
+        font-size: 1.7rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__score {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .main__current--label,
+    .main__current--score {
+        font-size: 1rem;
+    }
+
+    .main__current {
+        margin-bottom: 0.7rem;
+    }
+
+    .main__controls--dice-img {
+        height: 3rem;
+    }
+}
+@media (min-width: 801px) and (max-width: 900px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: red;
+    }
+
+    .menu__game-name {
+        background-color: red;
+    }
+}
+@media (min-width: 901px) and (max-width: 1024px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: blueviolet;
+    }
+
+    .menu__game-name {
+        background-color: blueviolet;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1280px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: burlywood;
+    }
+
+    .menu__game-name {
+        background-color: burlywood;
+    }
+}
+@media (min-width: 1281px) and (max-width: 1440px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: darkkhaki;
+    }
+
+    .menu__game-name {
+        background-color: darkkhaki;
+    }
+}
+@media (min-width: 1441px) and (max-width: 1800px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: darkorange;
+    }
+
+    .menu__game-name {
+        background-color: darkorange;
+    }
+}
+
+@media (min-width: 1801px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: chartreuse;
+    }
+
+    .menu__game-name {
+        background-color: chartreuse;
     }
 }
