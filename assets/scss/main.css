@@ -419,13 +419,13 @@ body {
 
 /* ********* HEADER ********* */
 .header__rules {
-  background: url(/assets/img/icons/dark/question.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/question.svg) no-repeat;
 }
 .header__new-game {
-  background: url(/assets/img/icons/dark/repeat.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/repeat.svg) no-repeat;
 }
 .header__settings {
-  background: url(/assets/img/icons/dark/cog.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/cog.svg) no-repeat;
 }
 
 /* ********* FOOTER ********* */
@@ -439,10 +439,10 @@ body {
   margin-bottom: 0;
 }
 .footer__back {
-  background: url(/assets/img/icons/dark/back-arrow.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/back-arrow.svg) no-repeat;
 }
 .footer__dice--icon {
-  background: url(/assets/img/icons/dark/dice.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/dice.svg) no-repeat;
 }
 
 /* ********* MAIN ********* */
@@ -812,6 +812,33 @@ body {
   }
   .menu__game-name {
     background-color: green;
+  }
+  .btn__icon {
+    float: left;
+    height: 30px;
+    width: 30px;
+  }
+  .main__name {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .main__score {
+    font-size: 2.5rem;
+  }
+  .main__current--label,
+.main__current--score {
+    font-size: 1.3rem;
+  }
+  .main__controls--dice-img {
+    height: 3.5rem;
+  }
+  .main__controls {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .main__current {
+    margin-bottom: 1rem;
   }
 }
 /* (320x480) Smartphone, Landscape */

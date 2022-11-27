@@ -111,6 +111,40 @@
     .menu__game-name {
         background-color: green;
     }
+
+    .btn__icon {
+        float: left;
+        height: 30px;
+        width: 30px;
+    }
+
+    .main__name {
+        font-size: 2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__score {
+        font-size: 2.5rem;
+    }
+
+    .main__current--label,
+    .main__current--score {
+        font-size: 1.3rem;
+    }
+
+    .main__controls--dice-img {
+        height: 3.5rem;
+    }
+
+    .main__controls {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .main__current {
+        margin-bottom: 1rem;
+    }
 }
 
 // ! Landscape
