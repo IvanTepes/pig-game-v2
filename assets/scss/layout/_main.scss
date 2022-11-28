@@ -19,6 +19,15 @@
             $shrink: none,
             $wrap: wrap
         );
+
+        &--active {
+            background-color: #8feeb596;
+            font-weight: bold;
+            .main__current {
+                background-color: #ee8fc8;
+                box-shadow: inset 0px 0px 7px 2px #b53b74;
+            }
+        }
     }
 
     &__name {
