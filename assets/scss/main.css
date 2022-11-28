@@ -519,7 +519,7 @@ body {
   justify-content: flex-end;
 }
 .main__controls--hold-icon {
-  background: url(/assets/img/icons/dark/save.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/save.svg) no-repeat;
 }
 .main__roll-dice {
   position: absolute;
@@ -527,7 +527,7 @@ body {
   top: 33%;
 }
 .main__roll-dice--icon {
-  background: url(/assets/img/icons/dark/dice.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/dice.svg) no-repeat;
 }
 
 /* ********* MODAL ********* */
@@ -752,25 +752,17 @@ body {
     display: block !important;
   }
 }
-/* (320x480) Smartphone, Portrait */
-@media (max-width: 320px) and (orientation: portrait) {
-  .btn__icon {
-    background-color: red;
-  }
-  .menu__game-name {
-    background-color: red;
-  }
-}
 @media (min-width: 360px) and (orientation: portrait) {
   .wrapper {
     justify-content: space-around;
   }
-  .btn__icon {
-    background-color: yellow;
+  /* .btn__icon {
+      background-color: yellow;
   }
+
   .menu__game-name {
-    background-color: yellow;
-  }
+      background-color: yellow;
+  } */
   .btn__icon {
     float: left;
     height: 24px;
@@ -790,29 +782,14 @@ body {
     height: 2.5rem;
   }
 }
-@media (min-width: 375px) and (orientation: portrait) {
-  .btn__icon {
-    background-color: blue;
-  }
-  .menu__game-name {
-    background-color: blue;
-  }
-}
-@media (min-width: 380px) and (orientation: portrait) {
-  .btn__icon {
-    background-color: gray;
-  }
-  .menu__game-name {
-    background-color: gray;
-  }
-}
 @media (min-width: 400px) and (orientation: portrait) {
-  .btn__icon {
-    background-color: green;
+  /* .btn__icon {
+      background-color: green;
   }
+
   .menu__game-name {
-    background-color: green;
-  }
+      background-color: green;
+  } */
   .btn__icon {
     float: left;
     height: 30px;
@@ -843,12 +820,13 @@ body {
 }
 /* (320x480) Smartphone, Landscape */
 @media (min-width: 480px) and (max-width: 568px) and (orientation: landscape) {
-  .btn__icon {
-    background-color: blue;
+  /* .btn__icon {
+      background-color: blue;
   }
+
   .menu__game-name {
-    background-color: blue;
-  }
+      background-color: blue;
+  } */
   .menu__logo-image {
     height: 4rem;
   }
@@ -861,12 +839,13 @@ body {
   }
 }
 @media (min-width: 569px) and (max-width: 640px) and (orientation: landscape) {
-  .btn__icon {
-    background-color: green;
+  /* .btn__icon {
+      background-color: green;
   }
+
   .menu__game-name {
-    background-color: green;
-  }
+      background-color: green;
+  } */
   .menu__logo-image {
     height: 4rem;
   }
@@ -879,12 +858,13 @@ body {
   }
 }
 @media (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
-  .btn__icon {
-    background-color: purple;
+  /* .btn__icon {
+      background-color: purple;
   }
+
   .menu__game-name {
-    background-color: purple;
-  }
+      background-color: purple;
+  } */
   .btn__icon {
     height: 26px;
     width: 26px;
@@ -910,50 +890,130 @@ body {
   }
 }
 @media (min-width: 801px) and (max-width: 900px) and (orientation: landscape) {
-  .btn__icon {
-    background-color: red;
+  /* .btn__icon {
+      background-color: red;
   }
+
   .menu__game-name {
-    background-color: red;
+      background-color: red;
+  } */
+  .btn__icon {
+    height: 30px;
+    width: 30px;
+  }
+  .main__name {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .main__score {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .main__current--label,
+.main__current--score {
+    font-size: 0.7rem;
+  }
+  .main__current {
+    margin-bottom: 0.7rem;
+  }
+  .main__controls--dice-img {
+    height: 2.5rem;
   }
 }
 @media (min-width: 901px) and (max-width: 1024px) and (orientation: landscape) {
-  .btn__icon {
-    background-color: blueviolet;
+  /* .btn__icon {
+      background-color: blueviolet;
   }
+
   .menu__game-name {
-    background-color: blueviolet;
+      background-color: blueviolet;
+  } */
+  .btn__icon {
+    height: 30px;
+    width: 30px;
+  }
+  .main__name {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .main__score {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .main__current--label,
+.main__current--score {
+    font-size: 1rem;
+  }
+  .main__current {
+    margin-bottom: 1.5rem;
+  }
+  .main__controls--dice-img {
+    height: 3rem;
   }
 }
-@media (min-width: 1025px) and (max-width: 1280px) and (orientation: landscape) {
-  .btn__icon {
-    background-color: burlywood;
+@media (min-width: 1025px) {
+  /* .btn__icon {
+      background-color: burlywood;
   }
+
   .menu__game-name {
-    background-color: burlywood;
+      background-color: burlywood;
+  } */
+  .btn__icon {
+    height: 35px;
+    width: 35px;
+  }
+  .main__name {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .main__score {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .main__current--label,
+.main__current--score {
+    font-size: 1rem;
+  }
+  .main__current {
+    margin-bottom: 1.5rem;
+  }
+  .main__controls--dice-img {
+    height: 3rem;
   }
 }
-@media (min-width: 1281px) and (max-width: 1440px) and (orientation: landscape) {
-  .btn__icon {
-    background-color: darkkhaki;
+@media (min-width: 1441px) and (orientation: landscape) {
+  /* .btn__icon {
+      background-color: darkorange;
   }
+
   .menu__game-name {
-    background-color: darkkhaki;
-  }
-}
-@media (min-width: 1441px) and (max-width: 1800px) and (orientation: landscape) {
+      background-color: darkorange;
+  } */
   .btn__icon {
-    background-color: darkorange;
+    height: 45px;
+    width: 45px;
   }
-  .menu__game-name {
-    background-color: darkorange;
+  .main__name {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
-}
-@media (min-width: 1801px) and (orientation: landscape) {
-  .btn__icon {
-    background-color: chartreuse;
+  .main__score {
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
   }
-  .menu__game-name {
-    background-color: chartreuse;
+  .main__current--label,
+.main__current--score {
+    font-size: 1.5rem;
+  }
+  .main__current {
+    margin-bottom: 1.5rem;
+  }
+  .main__controls--dice-img {
+    height: 4rem;
   }
 }/*# sourceMappingURL=main.css.map */
