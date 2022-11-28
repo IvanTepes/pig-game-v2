@@ -4,15 +4,14 @@
 
 .header {
     &__rules {
-        background: url(/pig-game-v2/assets/img/icons/dark/question.svg)
-            no-repeat;
+        background: url(/assets/img/icons/dark/question.svg) no-repeat;
     }
 
     &__new-game {
-        background: url(/pig-game-v2/assets/img/icons/dark/repeat.svg) no-repeat;
+        background: url(/assets/img/icons/dark/repeat.svg) no-repeat;
     }
 
     &__settings {
-        background: url(/pig-game-v2/assets/img/icons/dark/cog.svg) no-repeat;
+        background: url(/assets/img/icons/dark/cog.svg) no-repeat;
     }
 }
