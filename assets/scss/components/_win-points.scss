@@ -1,0 +1,28 @@
+// ! Win points
+
+/* ********* WIN POINTS ********* */
+.win-points {
+    &__main-btn {
+        font-family: $font__text-font !important;
+        font-size: 0.7rem !important;
+        display: inline !important;
+        font-weight: bold !important;
+    }
+
+    &__list-item {
+        @include btn__style--small;
+        border-radius: 0;
+        font-weight: $font__weight-bold;
+        font-family: $font__text-font;
+        letter-spacing: 0.5px;
+        &--active {
+            background-color: $colour__pale-green !important;
+            box-shadow: $shadow__inset;
+        }
+    }
+
+    &--disabled {
+        background-color: $colour__pale-green !important;
+        pointer-events: none !important;
+    }
+}
