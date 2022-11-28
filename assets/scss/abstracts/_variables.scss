@@ -59,13 +59,15 @@ $base-url: '/assets/' !default;
 
 // Fonts
 $font__title-font: 'Gloria Hallelujah', cursive !important;
-$font__text-font: 'Roboto', sans-serif !important;
+// $font__text-font: 'Roboto', sans-serif !important;
+$font__text-font: 'Nunito', sans-serif;
+
 $font__weight-bold: bold !important;
 $font__uppercase: uppercase !important;
 
 // Border
-$border__10: 10px !important;
-$border__20: 20px !important;
+$border__10: 10px;
+$border__20: 20px;
 
 // Colours
 $colour__pink: #ffc4c8;
