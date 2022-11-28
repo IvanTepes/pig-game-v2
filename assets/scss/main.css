@@ -419,13 +419,13 @@ body {
 
 /* ********* HEADER ********* */
 .header__rules {
-  background: url(/pig-game-v2/assets/img/icons/dark/question.svg) no-repeat;
+  background: url(/assets/img/icons/dark/question.svg) no-repeat;
 }
 .header__new-game {
-  background: url(/pig-game-v2/assets/img/icons/dark/repeat.svg) no-repeat;
+  background: url(/assets/img/icons/dark/repeat.svg) no-repeat;
 }
 .header__settings {
-  background: url(/pig-game-v2/assets/img/icons/dark/cog.svg) no-repeat;
+  background: url(/assets/img/icons/dark/cog.svg) no-repeat;
 }
 
 /* ********* FOOTER ********* */
@@ -439,10 +439,10 @@ body {
   margin-bottom: 0;
 }
 .footer__back {
-  background: url(/pig-game-v2/assets/img/icons/dark/back-arrow.svg) no-repeat;
+  background: url(/assets/img/icons/dark/back-arrow.svg) no-repeat;
 }
 .footer__dice--icon {
-  background: url(/pig-game-v2/assets/img/icons/dark/dice.svg) no-repeat;
+  background: url(/assets/img/icons/dark/dice.svg) no-repeat;
 }
 
 /* ********* MAIN ********* */
@@ -454,7 +454,7 @@ body {
   box-shadow: 0px 0px 6px 0px #b53b74;
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
-  border-radius: 10px !important;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   display: flex;
   flex-direction: row;
@@ -465,7 +465,7 @@ body {
 }
 .main__name {
   font-size: 1rem;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Nunito", sans-serif;
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
   text-transform: uppercase;
@@ -481,8 +481,8 @@ body {
   box-shadow: 2px 2px 6px 0px #b53b74;
   backdrop-filter: blur(7px) !important;
   -webkit-backdrop-filter: blur(7px) !important;
-  font-family: "Roboto", sans-serif !important;
-  border-radius: 10px !important;
+  font-family: "Nunito", sans-serif;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   width: auto !important;
   margin-bottom: 0.5rem;
@@ -510,7 +510,7 @@ body {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   box-shadow: 2px 2px 6px 0px #b53b74;
-  border-radius: 10px !important;
+  border-radius: 10px;
 }
 .main__controls--hold-col {
   align-self: center;
@@ -519,7 +519,7 @@ body {
   justify-content: flex-end;
 }
 .main__controls--hold-icon {
-  background: url(/pig-game-v2/assets/img/icons/dark/save.svg) no-repeat;
+  background: url(/assets/img/icons/dark/save.svg) no-repeat;
 }
 .main__roll-dice {
   position: absolute;
@@ -527,7 +527,7 @@ body {
   top: 33%;
 }
 .main__roll-dice--icon {
-  background: url(/pig-game-v2/assets/img/icons/dark/dice.svg) no-repeat;
+  background: url(/assets/img/icons/dark/dice.svg) no-repeat;
 }
 
 /* ********* MODAL ********* */
@@ -550,7 +550,7 @@ body {
 .modal-body {
   color: #1a0f15;
   font-weight: bold !important;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Nunito", sans-serif;
   letter-spacing: 0.5px;
 }
 .modal-body p {
@@ -568,7 +568,7 @@ body {
   box-shadow: 2px 2px 6px 0px #b53b74;
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
-  border-radius: 10px !important;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
 .btn__small:hover {
@@ -582,7 +582,7 @@ body {
   width: 40% !important;
   color: #603d51 !important;
   font-weight: bold !important;
-  border-radius: 10px !important;
+  border-radius: 10px;
   text-transform: uppercase !important;
 }
 .btn__big:hover {
@@ -603,7 +603,7 @@ body {
 .carousel__dice {
   height: 30px;
   width: 30px;
-  border-radius: 10px !important;
+  border-radius: 10px;
   box-shadow: 0px 0px 6px 0px #b53b74;
 }
 
@@ -626,7 +626,7 @@ body {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   box-shadow: 0px 0px 2px 0px #3d2935;
-  border-radius: 20px !important;
+  border-radius: 20px;
 }
 .audio__inner {
   display: block;
@@ -642,7 +642,7 @@ body {
   padding: 0;
   line-height: 32px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Nunito", sans-serif;
   font-weight: bold !important;
   box-sizing: border-box;
 }
@@ -670,7 +670,7 @@ body {
   right: 60px;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   box-shadow: 0px 0px 6px 0px #b53b74;
-  border-radius: 20px !important;
+  border-radius: 20px;
   transition: all 0.3s ease-in 0s;
 }
 
@@ -680,6 +680,37 @@ body {
 
 .audio__checkbox:checked + .audio__label .audio__switch {
   right: 0px;
+}
+
+.win-score {
+  font-family: "Nunito", sans-serif !important;
+  font-size: 1.5rem !important;
+  display: inline !important;
+}
+
+.list-group {
+  font-family: "Nunito", sans-serif;
+}
+.list-group-item {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 2px 2px 6px 0px #b53b74;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 0;
+}
+.list-group-item:hover {
+  background-color: #8feeb5 !important;
+  box-shadow: inset 0px 0px 6px 0px #3d2935;
+}
+
+.form-check-input {
+  background-color: #ffc4c8 !important;
+}
+
+.form-check-input:checked[type=radio] {
+  color: #8feeb5 !important;
 }
 
 /* ********* WRAPPER ********* */
@@ -756,13 +787,12 @@ body {
   .wrapper {
     justify-content: space-around;
   }
-  /* .btn__icon {
-      background-color: yellow;
+  .btn__icon {
+    background-color: yellow;
   }
-
   .menu__game-name {
-      background-color: yellow;
-  } */
+    background-color: yellow;
+  }
   .btn__icon {
     float: left;
     height: 24px;
@@ -783,13 +813,12 @@ body {
   }
 }
 @media (min-width: 400px) and (orientation: portrait) {
-  /* .btn__icon {
-      background-color: green;
+  .btn__icon {
+    background-color: green;
   }
-
   .menu__game-name {
-      background-color: green;
-  } */
+    background-color: green;
+  }
   .btn__icon {
     float: left;
     height: 30px;
@@ -820,15 +849,14 @@ body {
 }
 /* (320x480) Smartphone, Landscape */
 @media (min-width: 480px) and (max-width: 568px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: blue;
+  .btn__icon {
+    background-color: blue;
   }
-
   .menu__game-name {
-      background-color: blue;
-  } */
+    background-color: blue;
+  }
   .menu__logo-image {
-    height: 4rem;
+    height: 3.5rem;
   }
   .menu__game-name {
     font-size: 1.5rem;
@@ -839,15 +867,14 @@ body {
   }
 }
 @media (min-width: 569px) and (max-width: 640px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: green;
+  .btn__icon {
+    background-color: green;
   }
-
   .menu__game-name {
-      background-color: green;
-  } */
+    background-color: green;
+  }
   .menu__logo-image {
-    height: 4rem;
+    height: 3.5rem;
   }
   .menu__game-name {
     font-size: 1.5rem;
@@ -858,13 +885,12 @@ body {
   }
 }
 @media (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: purple;
+  .btn__icon {
+    background-color: purple;
   }
-
   .menu__game-name {
-      background-color: purple;
-  } */
+    background-color: purple;
+  }
   .btn__icon {
     height: 26px;
     width: 26px;
@@ -890,13 +916,15 @@ body {
   }
 }
 @media (min-width: 801px) and (max-width: 900px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: red;
+  .btn__icon {
+    background-color: red;
   }
-
   .menu__game-name {
-      background-color: red;
-  } */
+    background-color: red;
+  }
+  .menu__logo-image {
+    height: 4rem;
+  }
   .btn__icon {
     height: 30px;
     width: 30px;
@@ -922,13 +950,15 @@ body {
   }
 }
 @media (min-width: 901px) and (max-width: 1024px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: blueviolet;
+  .btn__icon {
+    background-color: blueviolet;
   }
-
   .menu__game-name {
-      background-color: blueviolet;
-  } */
+    background-color: blueviolet;
+  }
+  .menu__logo-image {
+    height: 5rem;
+  }
   .btn__icon {
     height: 30px;
     width: 30px;
@@ -954,13 +984,12 @@ body {
   }
 }
 @media (min-width: 1025px) {
-  /* .btn__icon {
-      background-color: burlywood;
+  .btn__icon {
+    background-color: burlywood;
   }
-
   .menu__game-name {
-      background-color: burlywood;
-  } */
+    background-color: burlywood;
+  }
   .btn__icon {
     height: 35px;
     width: 35px;
@@ -986,13 +1015,12 @@ body {
   }
 }
 @media (min-width: 1441px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: darkorange;
+  .btn__icon {
+    background-color: darkorange;
   }
-
   .menu__game-name {
-      background-color: darkorange;
-  } */
+    background-color: darkorange;
+  }
   .btn__icon {
     height: 45px;
     width: 45px;
