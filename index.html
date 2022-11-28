@@ -41,7 +41,7 @@
 				</div>
 				<!-- New Game -->
 				<div class="col-12 menu__item">
-					<button class="btn btn__big js__new-game">
+					<button class="btn btn__big js__new-game" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 						New Game
 					</button>
 				</div>
@@ -215,6 +215,71 @@
 				</div>
 			</div>
 		</div>
+		<!-- Determinate first player -->
+		<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+			Go First Dice
+		</button> -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+			aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content text-center">
+					<div class="modal-header">
+						<h1 class="modal-title w-100" id="staticBackdropLabel">Go first dice roll</h1>
+					</div>
+					<div class="modal-body">
+						Roll a dice to determinate who is playing first!
+						<br>
+						Player 1 will roll first!
+						<br>
+						<div class="container mt-3 mb-3 ">
+							<div class="row justify-content-center">
+								<div class="col-2">
+									<img src="assets/img/dice-img/dice-2.png" class="roll-first roll-first__dice-1"
+										alt="..." />
+								</div>
+								<div class="col-2">
+									<img src="assets/img/dice-img/dice-3.png" class="roll-first roll-first__dice-2"
+										alt="..." />
+								</div>
+							</div>
+						</div>
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-6">
+									<span class="text-uppercase">Player 1</span>
+									<span class="d-block">0</span>
+								</div>
+								<div class="col-6">
+									<span class="text-uppercase">Player 2</span>
+									<span class="d-block">0</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col">
+									<button type="button" class="btn btn__big" data-bs-dismiss="modal">Roll
+										Dice</button>
+								</div>
+								<!-- 								<div class="col-3">
+									<button type="button" class="btn btn-secondary visually-hidden"
+										data-bs-dismiss="modal">Close</button>
+								</div>
+								<div class="col-3">
+									<button type="button" class="btn btn-secondary visually-hidden"
+										data-bs-dismiss="modal">Close</button>
+								</div> -->
+							</div>
+						</div>
+						<!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- Header -->
 		<div class="container-fluid header mt-3 mb-3 text-center">
 			<div class="row">
@@ -321,9 +386,11 @@
 						</button>
 					</div>
 				</div>
-				<div class="col-3">
-					<div class="btn btn__small win-score" data-bs-toggle="modal" data-bs-target="#scoreModal">
-						10000
+				<!-- Win Score -->
+				<div class="col-3 win-points">
+					<div class="btn btn__small win-points__main-btn" data-bs-toggle="modal"
+						data-bs-target="#scoreModal">
+						100
 					</div>
 					<div class="modal fade" id="scoreModal" tabindex="-1" aria-labelledby="scoreModalLabel"
 						aria-hidden="true">
@@ -337,28 +404,27 @@
 								<div class="modal-body">
 									<div class="container-fluid text-center">
 										<div class="row align-items-center">
-											<ul class="list-group">
-												<li class="list-group-item">
-													<input class="form-check-input me-1" type="radio"
-														name="listGroupRadio" value="" id="firstRadio" checked />
-													<label class="form-check-label" for="firstRadio">100</label>
-												</li>
-												<li class="list-group-item">
-													<input class="form-check-input me-1" type="radio"
-														name="listGroupRadio" value="" id="secondRadio" />
-													<label class="form-check-label" for="secondRadio">500</label>
-												</li>
-												<li class="list-group-item">
-													<input class="form-check-input me-1" type="radio"
-														name="listGroupRadio" value="" id="thirdRadio" />
-													<label class="form-check-label" for="thirdRadio">1000</label>
-												</li>
-												<li class="list-group-item">
-													<input class="form-check-input me-1" type="radio"
-														name="listGroupRadio" value="" id="forthRadio" />
-													<label class="form-check-label" for="forthRadio">5000</label>
-												</li>
-											</ul>
+											<div class="list-group win-points__list">
+												<button type="button"
+													class="win-points__list-item list-group-item list-group-item-action win-points__list-item--active"
+													aria-current="true">
+													100
+												</button>
+												<button type="button"
+													class="win-points__list-item list-group-item list-group-item-action">
+													500</button>
+												<button type="button"
+													class="win-points__list-item list-group-item list-group-item-action">
+													1000</button>
+												<button type="button"
+													class="win-points__list-item list-group-item list-group-item-action">
+													5000</button>
+												<button type="button"
+													class="win-points__list-item list-group-item list-group-item-action"
+													disabled>A
+													disabled
+													button item</button>
+											</div>
 										</div>
 									</div>
 								</div>
