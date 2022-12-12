@@ -451,11 +451,13 @@ body {
 }
 .main__player {
   background-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0px 0px 6px 0px #b53b74;
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
-  border-radius: 10px;
+  border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: inset 2px 2px 5px #3d2935, inset -2px -2px 5px #b53b74;
+  transition: all 0.3s;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -464,12 +466,21 @@ body {
   flex-grow: 0;
 }
 .main__player--active {
-  background-color: rgba(143, 238, 181, 0.5882352941);
-  font-weight: bold;
+  box-shadow: 2px 2px 5px #3d2935, -2px -2px 5px #b53b74;
+  background: #ea80bb;
 }
 .main__player--active .main__current {
-  background-color: #ee8fc8;
-  box-shadow: inset 0px 0px 7px 2px #b53b74;
+  background-color: #ea80bb;
+  box-shadow: 1px 1px 3px #3d2935, -1px -1px 3px #b53b74;
+}
+.main__player--active .main__name,
+.main__player--active .main__score,
+.main__player--active .main__current--label,
+.main__player--active .main__current--score {
+  color: #000000;
+}
+.main__player--win {
+  background-color: rgba(143, 238, 181, 0.5882352941);
 }
 .main__name {
   font-size: 1rem;
@@ -483,6 +494,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 0.7rem;
   color: #363636;
+  contain: inline-size;
 }
 .main__current {
   background: rgba(255, 255, 255, 0);
@@ -505,6 +517,7 @@ body {
   font-size: 0.7rem;
   margin-bottom: 0;
   color: #363636;
+  contain: inline-size;
 }
 .main__controls {
   margin-top: 0.5rem !important;
@@ -517,7 +530,7 @@ body {
   height: 2rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  box-shadow: 2px 2px 6px 0px #b53b74;
+  box-shadow: 1px 1px 3px #3d2935, -1px -1px 3px #b53b74;
   border-radius: 10px;
 }
 .main__controls--hold-col {
@@ -612,7 +625,6 @@ body {
   height: 30px;
   width: 30px;
   border-radius: 10px;
-  box-shadow: 0px 0px 6px 0px #b53b74;
 }
 
 /* ********* AUDIO SWITCH ********* */
@@ -633,7 +645,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  box-shadow: 0px 0px 2px 0px #3d2935;
+  box-shadow: 1px 1px 3px #3d2935, -1px -1px 3px #b53b74;
   border-radius: 20px;
 }
 .audio__inner {
@@ -677,7 +689,7 @@ body {
   bottom: 0;
   right: 60px;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  box-shadow: 0px 0px 6px 0px #b53b74;
+  box-shadow: 1px 1px 3px #3d2935, -1px -1px 3px #b53b74;
   border-radius: 20px;
   transition: all 0.3s ease-in 0s;
 }
@@ -691,45 +703,113 @@ body {
 }
 
 /* ********* WIN POINTS ********* */
-.win-points__main-btn {
-  font-family: "Nunito", sans-serif !important;
+.win-points__display {
   font-size: 0.7rem !important;
-  display: inline !important;
-  font-weight: bold !important;
-}
-.win-points__list-item {
-  background-color: rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 2px 2px 6px 0px #b53b74;
-  backdrop-filter: blur(4px) !important;
-  -webkit-backdrop-filter: blur(4px) !important;
+  font-weight: bold;
+  padding: 6px 30px;
   border-radius: 10px;
+  box-shadow: 1px 1px 3px #3d2935, -1px -1px 3px #b53b74;
+  -webkit-backdrop-filter: blur(7px) !important;
+          backdrop-filter: blur(7px) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  border-radius: 0;
-  font-weight: bold !important;
-  font-family: "Nunito", sans-serif;
-  letter-spacing: 0.5px;
 }
-.win-points__list-item:hover {
-  background-color: #8feeb5 !important;
-  box-shadow: inset 0px 0px 6px 0px #3d2935;
-}
-.win-points__list-item--active {
-  background-color: #8feeb5 !important;
-  box-shadow: inset 0px 0px 6px 0px #3d2935;
-}
-.win-points--disabled {
-  background-color: #8feeb5 !important;
-  pointer-events: none !important;
+.win-points--active {
+  background-color: #8feeb5;
 }
 
 /* ********* ROLL FIRST ********* */
-.roll-first {
+.first-roll__players {
+  width: auto !important;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 2px 2px 6px 0px #b53b74;
+  transition: all 0.75s;
+}
+.first-roll__dices {
   height: 35px;
   width: 35px;
   border-radius: 5px;
   box-shadow: 2px 2px 6px 0px #b53b74;
 }
+.first-roll__active {
+  background-color: #8feeb5;
+}
 
+.dice-roll {
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: roll 0.2s ease-in-out;
+          animation: roll 0.2s ease-in-out;
+}
+
+@-webkit-keyframes roll {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 720deg);
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 720deg);
+  }
+}
+.fade-out {
+  -webkit-animation: fade-out 1s ease-out both;
+  animation: fade-out 1s ease-out both;
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.blink {
+  -webkit-animation: blink-2 0.9s infinite both;
+  animation: blink 0.9s infinite both;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* ********* WRAPPER ********* */
 .wrapper {
   height: 100%;
@@ -770,6 +850,23 @@ body {
   color: #ffc4c8;
   text-shadow: 1px 1px 1px #1a0f15;
   margin-bottom: 0.5rem;
+}
+
+/* ********* LOADER ********* */
+.overlay {
+  background: linear-gradient(to top, #ee8fc8, #d74389);
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.overlay__image {
+  height: 7rem;
+  filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5)) !important;
 }
 
 /* ********* MEDIA QUERIES ********* */
@@ -815,7 +912,7 @@ body {
     height: 24px;
     width: 24px;
   }
-  .win-points__main-btn {
+  .win-points__display {
     font-size: 0.7rem !important;
   }
   .main__name {
@@ -843,7 +940,7 @@ body {
     height: 28px;
     width: 28px;
   }
-  .win-points__main-btn {
+  .win-points__display {
     font-size: 1.2rem !important;
   }
   .main__name {
@@ -882,7 +979,7 @@ body {
   }
   .main__current--label,
 .main__current--score,
-.win-points__main-btn {
+.win-points__display {
     font-size: 0.7rem !important;
   }
   .menu__logo-image {
@@ -924,7 +1021,7 @@ body {
     height: 26px;
     width: 26px;
   }
-  .win-points__main-btn {
+  .win-points__display {
     font-size: 0.7rem !important;
   }
   .main__name {
@@ -961,7 +1058,7 @@ body {
     height: 30px;
     width: 30px;
   }
-  .win-points__main-btn {
+  .win-points__display {
     font-size: 0.7rem !important;
   }
   .main__name {
@@ -998,7 +1095,7 @@ body {
     height: 30px;
     width: 30px;
   }
-  .win-points__main-btn {
+  .win-points__display {
     font-size: 1rem !important;
   }
   .main__name {
@@ -1032,7 +1129,7 @@ body {
     height: 35px;
     width: 35px;
   }
-  .win-points__main-btn {
+  .win-points__display {
     font-size: 1rem !important;
   }
   .main__name {
@@ -1071,8 +1168,8 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-  .win-points__main-btn {
-    font-size: 1.5rem !important;
+  .win-points__display {
+    font-size: 2.2rem !important;
   }
   .main__name {
     font-size: 3rem;

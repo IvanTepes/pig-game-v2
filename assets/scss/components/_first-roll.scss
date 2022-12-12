@@ -1,0 +1,25 @@
+// ! Roll First
+
+/* ********* ROLL FIRST ********* */
+
+.first-roll {
+    &__players {
+        width: auto !important;
+        background-color: rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        box-shadow: 2px 2px 6px 0px #b53b74;
+        transition: all 0.75s;
+    }
+
+    &__dices {
+        height: 35px;
+        width: 35px;
+        border-radius: 5px;
+        box-shadow: $shadow__btn;
+    }
+
+    &__active {
+        background-color: #8feeb5;
+    }
+}

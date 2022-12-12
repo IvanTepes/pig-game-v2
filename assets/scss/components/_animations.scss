@@ -1,0 +1,66 @@
+// Roll Dice animation
+.dice-roll {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    backface-visibility: hidden;
+    animation: roll 0.2s ease-in-out;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate3d(1, 1, 1, 0deg);
+    }
+    100% {
+        transform: rotate3d(1, 1, 1, 720deg);
+    }
+}
+
+.fade-out {
+    -webkit-animation: fade-out 1s ease-out both;
+    animation: fade-out 1s ease-out both;
+}
+
+@-webkit-keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.blink {
+    -webkit-animation: blink-2 0.9s infinite both;
+    animation: blink 0.9s infinite both;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}

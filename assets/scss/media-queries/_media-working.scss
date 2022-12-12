@@ -1,0 +1,344 @@
+@media (min-width: 360px) and (orientation: portrait) {
+    .wrapper {
+        justify-content: space-around;
+    }
+    /*     .btn__icon {
+        background-color: yellow;
+    }
+
+    .menu__game-name {
+        background-color: yellow;
+    } */
+
+    .btn__icon {
+        float: left;
+        height: 24px;
+        width: 24px;
+    }
+
+    .main__name {
+        font-size: 1.3rem;
+    }
+
+    .main__score {
+        font-size: 1.8rem;
+    }
+
+    .main__current--label,
+    .main__current--score,
+    .win-points__display {
+        font-size: 0.7rem !important;
+    }
+
+    .main__controls--dice-img {
+        height: 2.3rem;
+    }
+}
+
+@media (min-width: 400px) and (orientation: portrait) {
+    .btn__icon {
+        background-color: green;
+    }
+
+    .menu__game-name {
+        background-color: green;
+    }
+
+    .btn__icon {
+        float: left;
+        height: 30px;
+        width: 30px;
+    }
+
+    .main__name {
+        font-size: 1.7rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__score {
+        font-size: 2.2rem;
+    }
+
+    .main__current--label,
+    .main__current--score,
+    .win-points__display {
+        font-size: 1.2rem !important;
+    }
+
+    .main__controls--dice-img {
+        height: 3rem;
+    }
+
+    .main__controls {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .main__current {
+        margin-bottom: 1rem;
+    }
+}
+
+// ! Landscape
+
+// ! Mobile Landscape
+
+/* (320x480) Smartphone, Landscape */
+@media (min-width: 480px) and (max-width: 568px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: blue;
+    }
+
+    .menu__game-name {
+        background-color: blue;
+    }
+
+    .menu__logo-image {
+        height: 3.5rem;
+    }
+
+    .menu__game-name {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .btn__big {
+        font-size: 0.7rem !important;
+    }
+
+    .main__current--label,
+    .main__current--score,
+    .win-points__display {
+        font-size: 0.7rem !important;
+    }
+}
+
+@media (min-width: 569px) and (max-width: 640px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: green;
+    }
+
+    .menu__game-name {
+        background-color: green;
+    }
+
+    .menu__logo-image {
+        height: 3.5rem;
+    }
+
+    .menu__game-name {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .btn__big {
+        font-size: 0.7rem !important;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: purple;
+    }
+
+    .menu__game-name {
+        background-color: purple;
+    }
+
+    .btn__icon {
+        height: 26px;
+        width: 26px;
+    }
+
+    .main__name {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__score {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .main__current--label,
+    .main__current--score,
+    .win-points__display {
+        font-size: 0.7rem !important;
+    }
+
+    .main__current {
+        margin-bottom: 0.7rem;
+    }
+
+    .main__controls--dice-img {
+        height: 2.5rem;
+    }
+}
+@media (min-width: 801px) and (max-width: 900px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: red;
+    }
+
+    .menu__game-name {
+        background-color: red;
+    }
+
+    .menu__logo-image {
+        height: 4rem;
+    }
+
+    .btn__icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .main__name {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__score {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .main__current--label,
+    .main__current--score,
+    .win-points__display {
+        font-size: 0.7rem !important;
+    }
+
+    .main__current {
+        margin-bottom: 0.7rem;
+    }
+
+    .main__controls--dice-img {
+        height: 2.5rem;
+    }
+}
+@media (min-width: 901px) and (max-width: 1024px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: blueviolet;
+    }
+
+    .menu__game-name {
+        background-color: blueviolet;
+    }
+
+    .menu__logo-image {
+        height: 5rem;
+    }
+
+    .btn__icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .main__name {
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .main__score {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .main__current--label,
+    .main__current--score,
+    .win-points__display {
+        font-size: 1rem !important;
+    }
+
+    .main__current {
+        margin-bottom: 1.5rem;
+    }
+
+    .main__controls--dice-img {
+        height: 3rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .btn__icon {
+        background-color: burlywood;
+    }
+
+    .menu__game-name {
+        background-color: burlywood;
+    }
+
+    .btn__icon {
+        height: 35px;
+        width: 35px;
+    }
+
+    .main__name {
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .main__score {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .main__current--label,
+    .main__current--score,
+    .win-points__display {
+        font-size: 1rem !important;
+    }
+
+    .main__current {
+        margin-bottom: 1.5rem;
+    }
+
+    .main__controls--dice-img {
+        height: 3rem;
+    }
+}
+
+@media (min-width: 1441px) and (orientation: landscape) {
+    .btn__icon {
+        background-color: darkorange;
+    }
+
+    .menu__game-name {
+        background-color: darkorange;
+    }
+
+    .btn__icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .main__name {
+        font-size: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .main__score {
+        font-size: 4.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .main__current--label,
+    .main__current--score,
+    .win-points__display {
+        font-size: 1.5rem !important;
+    }
+
+    .main__current {
+        margin-bottom: 1.5rem;
+    }
+
+    .main__controls--dice-img {
+        height: 4rem;
+    }
+}

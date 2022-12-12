@@ -68,10 +68,12 @@ $font__uppercase: uppercase !important;
 // Border
 $border__10: 10px;
 $border__20: 20px;
+$border__30: 30px;
 
 // Colours
 $colour__pink: #ffc4c8;
 $colour__plum: #ee8fc8;
+$colour__dark-plum: #ea80bb;
 $colour__pale-violet: #d74389;
 $colour__medium-violet: #b53b74;
 $colour__red: #eb1313;
@@ -101,7 +103,12 @@ $shadow__inset: inset 0px 0px 6px 0px $colour__dark-slategray;
 $shadow__btn: 2px 2px 6px 0px $colour__medium-violet;
 $shadow__modal: 0px 0px 2px 0px $colour__dark-slategray;
 $shadow__text: 1px 1px 1px $colour__dark-gray;
-$shadow__box: 0px 0px 6px 0px $colour__medium-violet;
+$shadow__box-small: 1px 1px 3px $colour__dark-slategray,
+    -1px -1px 3px $colour__medium-violet;
+$shadow__main-inset: inset 2px 2px 5px $colour__dark-slategray,
+    inset -2px -2px 5px $colour__medium-violet;
+$shadow__main: 2px 2px 5px $colour__dark-slategray,
+    -2px -2px 5px $colour__medium-violet;
 
 // Filters
 $filter__blur-4: blur(4px) !important;

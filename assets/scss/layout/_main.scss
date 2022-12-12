@@ -7,11 +7,14 @@
 
     &__player {
         background-color: $colour__transparent-025;
-        box-shadow: $shadow__box;
+        // box-shadow: $shadow__box-small;
         backdrop-filter: $filter__blur-4;
         -webkit-backdrop-filter: $filter__blur-4;
-        border-radius: $border__10;
+        border-radius: $border__30;
         border: $border__box-border;
+        background-color: rgb(255 255 255 / 0%);
+        box-shadow: $shadow__main-inset;
+        transition: all 0.3s;
 
         @include flexbox(
             $display: flex,
@@ -21,12 +24,23 @@
         );
 
         &--active {
-            background-color: #8feeb596;
-            font-weight: bold;
+            // background-color: #8feeb596;
+            // font-weight: bold;
+            box-shadow: $shadow__main;
+            background: $colour__dark-plum;
             .main__current {
-                background-color: #ee8fc8;
-                box-shadow: inset 0px 0px 7px 2px #b53b74;
+                background-color: $colour__dark-plum;
+                box-shadow: $shadow__box-small;
             }
+            .main__name,
+            .main__score,
+            .main__current--label,
+            .main__current--score {
+                color: #000000;
+            }
+        }
+        &--win {
+            background-color: #8feeb596;
         }
     }
 
@@ -43,6 +57,7 @@
         font-size: 1.5rem;
         margin-bottom: 0.7rem;
         color: #363636;
+        contain: inline-size;
     }
 
     &__current {
@@ -67,6 +82,7 @@
             font-size: 0.7rem;
             margin-bottom: 0;
             color: #363636;
+            contain: inline-size;
         }
     }
 
@@ -80,7 +96,7 @@
             height: 2rem;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
-            box-shadow: $shadow__btn;
+            box-shadow: $shadow__box-small;
             border-radius: $border__10;
         }
         &--hold-col {
