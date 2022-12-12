@@ -26,10 +26,14 @@
 </head>
 
 <body>
+	<div id="loader" class="overlay">
+		<img class="overlay__image blink" src="assets/img/logo/logo.png" alt="" srcset="">
+		<span class="menu__game-name">Greedy Pig</span>
+	</div>
 	<!-- Game Wrapper -->
 	<div class="wrapper">
 		<!-- Main Menu -->
-		<div class="container-fluid menu text-center">
+		<div id="js__menu" class="container-fluid menu text-center">
 			<div class="row g-2">
 				<!-- Logo -->
 				<div class="col-12 menu__logo">
@@ -41,19 +45,22 @@
 				</div>
 				<!-- New Game -->
 				<div class="col-12 menu__item">
-					<button class="btn btn__big js__new-game" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+					<button id="js__menu--new-game" class="btn btn__big new-game" data-bs-toggle="modal"
+						data-bs-target="#staticBackdrop">
 						New Game
 					</button>
 				</div>
 				<!-- Rules -->
 				<div class="col-12 menu__item">
-					<button class="btn btn__big js__rules" data-bs-toggle="modal" data-bs-target="#rulesModal">
+					<button id="js__menu--rules" class="btn btn__big rules" data-bs-toggle="modal"
+						data-bs-target="#rulesModal">
 						Rules
 					</button>
 				</div>
 				<!-- Settings -->
 				<div class="col-12 menu__item">
-					<button class="btn btn__big js__settings" data-bs-toggle="modal" data-bs-target="#settingsModal">
+					<button id="js__menu--settings" class="btn btn__big settings" data-bs-toggle="modal"
+						data-bs-target="#settingsModal">
 						Settings
 					</button>
 				</div>
@@ -121,17 +128,13 @@
 								<div class="col-6">
 									<div id="dice-carousel" class="carousel slide" data-bs-ride="false">
 										<div class="carousel-inner">
-											<div class="carousel-item active">
-												<img src="assets/img/dice-img/dice-1.png" class="carousel__dice"
-													alt="..." />
+											<div id="dice-light" class="carousel-item carousel-dice__item active">
+												<img src="assets/img/dice-img/light/dice-light-1.png"
+													class="carousel__dice " alt="dice-img-light" />
 											</div>
-											<div class="carousel-item">
-												<img src="assets/img/dice-img/dice-2.png" class="carousel__dice"
-													alt="..." />
-											</div>
-											<div class="carousel-item">
-												<img src="assets/img/dice-img/dice-3.png" class="carousel__dice"
-													alt="..." />
+											<div id="dice-dark" class="carousel-item carousel-dice__item">
+												<img src="assets/img/dice-img/dark/dice-dark-1.png"
+													class="carousel__dice " alt="dice-img-dark" />
 											</div>
 										</div>
 										<button class="carousel-control-prev" type="button"
@@ -153,16 +156,16 @@
 								<div class="col-6">
 									<div id="points-carousel" class="carousel slide" data-bs-ride="false">
 										<div class="carousel-inner">
-											<div class="carousel-item active">
+											<div id="points-100" class="carousel-item carousel-points__item active">
 												<p>100</p>
 											</div>
-											<div class="carousel-item">
+											<div id="points-500" class="carousel-item carousel-points__item">
 												<p>500</p>
 											</div>
-											<div class="carousel-item">
+											<div id="points-1000" class="carousel-item carousel-points__item">
 												<p>1000</p>
 											</div>
-											<div class="carousel-item">
+											<div id="points-5000" class="carousel-item carousel-points__item">
 												<p>5000</p>
 											</div>
 										</div>
@@ -216,44 +219,40 @@
 			</div>
 		</div>
 		<!-- Determinate first player -->
-		<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-			Go First Dice
-		</button> -->
-
 		<!-- Modal -->
 		<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
 			aria-labelledby="staticBackdropLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content text-center">
 					<div class="modal-header">
-						<h1 class="modal-title w-100" id="staticBackdropLabel">Go first dice roll</h1>
+						<h1 class="modal-title w-100" id="staticBackdropLabel">Go first dice</h1>
 					</div>
 					<div class="modal-body">
-						Roll a dice to determinate who is playing first!
+						<span class="first-roll__message--top">Roll the dice to determine who plays first!</span>
 						<br>
-						Player 1 will roll first!
-						<br>
-						<div class="container mt-3 mb-3 ">
+						<span class="first-roll__message--bottom js__hide">Player 1 will roll the dice
+							first!</span>
+						<div class="container mt-3 mb-3 first-roll js__hide">
 							<div class="row justify-content-center">
 								<div class="col-2">
-									<img src="assets/img/dice-img/dice-2.png" class="roll-first roll-first__dice-1"
-										alt="..." />
+									<img src="assets/img/dice-img/light/dice-light-3.png"
+										class="first-roll__dices first-roll__die-1" alt="die-image" />
 								</div>
 								<div class="col-2">
-									<img src="assets/img/dice-img/dice-3.png" class="roll-first roll-first__dice-2"
-										alt="..." />
+									<img src="assets/img/dice-img/light/dice-light-4.png"
+										class="first-roll__dices first-roll__die-2" alt="die-image" />
 								</div>
 							</div>
 						</div>
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-6">
+						<div id="js__first-roll__scores" class="container-fluid first-roll">
+							<div class="row justify-content-around">
+								<div class="col-6 first-roll__players first-roll__player-0 first-roll__active">
 									<span class="text-uppercase">Player 1</span>
-									<span class="d-block">0</span>
+									<span id="first-roll__player-0--total" class="d-block player__total">0</span>
 								</div>
-								<div class="col-6">
+								<div class="col-6 first-roll__players first-roll__player-1">
 									<span class="text-uppercase">Player 2</span>
-									<span class="d-block">0</span>
+									<span id="first-roll__player-1--total" class="d-block player__total">0</span>
 								</div>
 							</div>
 						</div>
@@ -262,20 +261,35 @@
 						<div class="container-fluid">
 							<div class="row">
 								<div class="col">
-									<button type="button" class="btn btn__big" data-bs-dismiss="modal">Roll
+									<button type="button" class="btn btn__big first-roll__btn">Roll
 										Dice</button>
 								</div>
-								<!-- 								<div class="col-3">
-									<button type="button" class="btn btn-secondary visually-hidden"
-										data-bs-dismiss="modal">Close</button>
-								</div>
-								<div class="col-3">
-									<button type="button" class="btn btn-secondary visually-hidden"
-										data-bs-dismiss="modal">Close</button>
-								</div> -->
 							</div>
 						</div>
-						<!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Start New game modal -->
+		<div class="modal fade" id="startNewGameModal" tabindex="-1" aria-labelledby="startNewGameModal"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						<h1 class="modal-title w-100" id="startNewGameModal">
+							Start new game ?
+						</h1>
+					</div>
+					<div id="js__modal__reset__body" class="modal-body text-center w-100">
+					</div>
+					<div class="modal-footer">
+						<button id="js__modal__reset" type="button" class="btn btn__big mx-auto" data-bs-toggle="modal"
+							data-bs-target="#staticBackdrop">
+							Yes
+						</button>
+						<button type="button" class="btn btn__big mx-auto" data-bs-dismiss="modal">
+							No
+						</button>
 					</div>
 				</div>
 			</div>
@@ -285,22 +299,21 @@
 			<div class="row">
 				<!-- Rules -->
 				<div class="col-4">
-					<button class="btn btn__small">
-						<span class="header__rules btn__icon" data-bs-toggle="modal"
-							data-bs-target="#rulesModal"></span>
+					<button class="btn btn__small" data-bs-toggle="modal" data-bs-target="#rulesModal">
+						<span class="header__rules btn__icon"></span>
 					</button>
 				</div>
 				<!-- New Game -->
 				<div class="col-4">
-					<button class="btn btn__small">
+					<button id="js__header--new-game" class="btn btn__small" data-bs-toggle="modal"
+						data-bs-target="#startNewGameModal">
 						<span class="header__new-game btn__icon"></span>
 					</button>
 				</div>
 				<!-- Settings -->
 				<div class="col-4">
-					<button class="btn btn__small">
-						<span class="header__settings btn__icon" data-bs-toggle="modal"
-							data-bs-target="#settingsModal"></span>
+					<button class="btn btn__small" data-bs-toggle="modal" data-bs-target="#settingsModal">
+						<span class="header__settings btn__icon"></span>
 					</button>
 				</div>
 			</div>
@@ -315,9 +328,9 @@
 				</div>
 				<!-- Player 0 score -->
 				<div class="col-12">
-					<p class="main__score" id="score-0">23</p>
+					<p class="main__score" id="js__score__player--0">0</p>
 					<div class="main__roll-dice roll-dice__portrait">
-						<button class="btn btn__small">
+						<button id="js__btn-roll-0" class="btn btn__small btn-roll visually-hidden">
 							<span class="main__roll-dice--icon btn__icon"></span>
 						</button>
 					</div>
@@ -328,17 +341,18 @@
 						<p class="main__current--label">Current</p>
 					</div>
 					<div class="col-12">
-						<p class="main__current--score" id="current-0">0</p>
+						<p class="main__current--score" id="js__current-0">0</p>
 					</div>
 				</div>
 			</div>
 			<!-- Controls Dice / Hold -->
 			<div class="row main__controls">
 				<div class="col main__controls--dice-col">
-					<img class="main__controls--dice-img" src="assets/img/dice-img/dice-1.png" alt="" srcset="" />
+					<img class="main__controls--dice-img" src="assets/img/dice-img/light/dice-light-1.png" alt=""
+						srcset="" />
 				</div>
 				<div class="col main__controls--hold-col">
-					<button class="btn btn__small">
+					<button class="btn btn__small btn-hold">
 						<span class="main__controls--hold-icon btn__icon"></span>
 					</button>
 				</div>
@@ -351,9 +365,9 @@
 				</div>
 				<!-- Player 1 score -->
 				<div class="col-12">
-					<p class="main__score" id="score-1">23</p>
+					<p class="main__score" id="js__score__player--1"></p>
 					<div class="main__roll-dice roll-dice__portrait">
-						<button class="btn btn__small">
+						<button id="js__btn-roll-1" class="btn btn__small btn-roll visually-hidden">
 							<span class="main__roll-dice--icon btn__icon"></span>
 						</button>
 					</div>
@@ -364,83 +378,56 @@
 						<p class="main__current--label">Current</p>
 					</div>
 					<div class="col-12">
-						<p class="main__current--score" id="current-1">0</p>
+						<p class="main__current--score" id="js__current-1">0</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- Footer -->
+		<!-- Back to menu modal -->
+		<div class="modal fade" id="returnToMenuModal" tabindex="-1" aria-labelledby="returnToMenuLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title  w-100 text-center" id="returnToMenuLabel">Return To main menu ?</h1>
+					</div>
+					<div class="modal-body text-center">
+						Are you sure you want to quit to the main menu?
+					</div>
+					<div class="modal-footer">
+						<button id="js__return-to-main-menu" type="button" class="btn btn__big mx-auto"
+							data-bs-dismiss="modal">Yes</button>
+						<button type="button" class="btn btn__big mx-auto" data-bs-dismiss="modal">No</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Back Btn -->
 		<div class="container-fluid footer mb-3 mt-3">
 			<div class="row footer__row text-center">
-				<!-- Back Btn -->
 				<div class="col-2 position-absolute bottom-1 start-0">
-					<button id="js__back-btn" class="btn btn__small">
+					<button id="js__back-btn" class="btn btn__small" data-bs-toggle="modal"
+						data-bs-target="#returnToMenuModal">
 						<span class="footer__back btn__icon"></span>
 					</button>
 				</div>
 				<!-- Roll dice player 0 landscape -->
 				<div class="col-3 text-center">
 					<div class="footer__dice roll-dice__landscape">
-						<button class="btn btn__small">
+						<button id="js__btn-roll-0" class="btn btn__small btn-roll visually-hidden">
 							<span class="footer__dice--icon btn__icon"></span>
 						</button>
 					</div>
 				</div>
 				<!-- Win Score -->
-				<div class="col-3 win-points">
-					<div class="btn btn__small win-points__main-btn" data-bs-toggle="modal"
-						data-bs-target="#scoreModal">
-						100
-					</div>
-					<div class="modal fade" id="scoreModal" tabindex="-1" aria-labelledby="scoreModalLabel"
-						aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-							<div class="modal-content">
-								<div class="modal-header text-center">
-									<h1 class="modal-title w-100" id="scoreModalLabel">
-										Win score
-									</h1>
-								</div>
-								<div class="modal-body">
-									<div class="container-fluid text-center">
-										<div class="row align-items-center">
-											<div class="list-group win-points__list">
-												<button type="button"
-													class="win-points__list-item list-group-item list-group-item-action win-points__list-item--active"
-													aria-current="true">
-													100
-												</button>
-												<button type="button"
-													class="win-points__list-item list-group-item list-group-item-action">
-													500</button>
-												<button type="button"
-													class="win-points__list-item list-group-item list-group-item-action">
-													1000</button>
-												<button type="button"
-													class="win-points__list-item list-group-item list-group-item-action">
-													5000</button>
-												<button type="button"
-													class="win-points__list-item list-group-item list-group-item-action"
-													disabled>A
-													disabled
-													button item</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn__big mx-auto" data-bs-dismiss="modal">
-										Close
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
+				<div class="col-3 ">
+					<span class="win-points__display">100</span>
 				</div>
 				<!-- Roll dice player 1 landscape -->
 				<div class="col-3">
 					<div class="footer__dice roll-dice__landscape">
-						<button class="btn btn__small">
+						<button id="js__btn-roll-1" class="btn btn__small btn-roll visually-hidden">
 							<span class="footer__dice--icon btn__icon"></span>
 						</button>
 					</div>
