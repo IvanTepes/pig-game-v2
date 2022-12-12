@@ -419,13 +419,13 @@ body {
 
 /* ********* HEADER ********* */
 .header__rules {
-  background: url(/assets/img/icons/dark/question.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/question.svg) no-repeat;
 }
 .header__new-game {
-  background: url(/assets/img/icons/dark/repeat.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/repeat.svg) no-repeat;
 }
 .header__settings {
-  background: url(/assets/img/icons/dark/cog.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/cog.svg) no-repeat;
 }
 
 /* ********* FOOTER ********* */
@@ -540,7 +540,7 @@ body {
   justify-content: flex-end;
 }
 .main__controls--hold-icon {
-  background: url(/assets/img/icons/dark/save.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/save.svg) no-repeat;
 }
 .main__roll-dice {
   position: absolute;
@@ -548,7 +548,7 @@ body {
   top: 33%;
 }
 .main__roll-dice--icon {
-  background: url(/assets/img/icons/dark/dice.svg) no-repeat;
+  background: url(/pig-game-v2/assets/img/icons/dark/dice.svg) no-repeat;
 }
 
 /* ********* MODAL ********* */
