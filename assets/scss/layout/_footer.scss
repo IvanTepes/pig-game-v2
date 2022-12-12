@@ -14,12 +14,14 @@
     }
 
     &__back {
-        background: url(/assets/img/icons/dark/back-arrow.svg) no-repeat;
+        background: url(/pig-game-v2/assets/img/icons/dark/back-arrow.svg)
+            no-repeat;
     }
 
     &__dice {
         &--icon {
-            background: url(/assets/img/icons/dark/dice.svg) no-repeat;
+            background: url(/pig-game-v2/assets/img/icons/dark/dice.svg)
+                no-repeat;
         }
     }
 }
