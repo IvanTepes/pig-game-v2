@@ -347,6 +347,12 @@ btnHeaderNewGame.addEventListener('click', function () {
     startFirstRoll();
 });
 
+// ! BACK BUTTON
+/*
+Back button is removing a class called visually-hidden from an element with
+the ID mainMenuEl, updating scores in the HTML document, resetting the game,
+and enabling win points in the game's settings.
+*/
 btnBack.addEventListener('click', function () {
     btnModalBackToMenu.addEventListener('click', function () {
         mainMenuEl.classList.remove('visually-hidden');
@@ -358,22 +364,6 @@ btnBack.addEventListener('click', function () {
         enableCarouselControls();
     });
 });
-
-// ! BACK BUTTON
-/*
-Back button is removing a class called visually-hidden from an element with
-the ID mainMenuEl, updating scores in the HTML document, resetting the game,
-and enabling win points in the game's settings.
-*/
-// btnBack.addEventListener('click', function () {
-//     mainMenuEl.classList.remove('visually-hidden');
-//     // Update the game scores in the HTML document
-//     updateScoresInDom();
-//     // Reset the game to its initial state
-//     resetGame();
-//     // Enable win points in settings
-//     enableCarouselControls();
-// });
 
 // ! ROLL BUTTON
 /*
@@ -458,7 +448,7 @@ btnHold.addEventListener('click', function () {
         ).textContent = gameScores[activePlayer];
 
         // Check if the active player has reached or surpassed the winPoints score
-        if (gameScores[activePlayer] >= winPoints) {
+        if (gameScores[activePlayer] >= 10) {
             // End the game
 
             // Set the current scores for both players to 0
@@ -471,7 +461,12 @@ btnHold.addEventListener('click', function () {
             // Add the 'player__winner' class to the active player
             document
                 .querySelector(`.player-${activePlayer}`)
-                .classList.add('player__winner');
+                .classList.add('main__player--winner');
+
+            // Add the 'player__lost' class to non-active player
+            document
+                .querySelector(`.player-${activePlayer === 0 ? 1 : 0}`)
+                .classList.add('main__player--lost');
 
             // Switch to the other player
             toggleActivePlayer();
@@ -572,8 +567,16 @@ function resetGame() {
     gamePlaying = false;
 
     // Remove the active class from the gamePlayer0El and gamePlayer1El elements
-    gamePlayer0El.classList.remove('main__player--active');
-    gamePlayer1El.classList.remove('main__player--active');
+    gamePlayer0El.classList.remove(
+        'main__player--active',
+        'main__player--winner',
+        'main__player--lost'
+    );
+    gamePlayer1El.classList.remove(
+        'main__player--active',
+        'main__player--winner',
+        'main__player--lost'
+    );
 
     // Update the scores in the HTML document
     updateScoresInDom();
@@ -626,6 +629,9 @@ function disableCarouselControls() {
         controlBtn.style.cursor = 'not-allowed';
     });
 
+    // Disable touch scroll between items
+    carouselPoints.setAttribute('data-bs-touch', 'false');
+
     // Add the win-points--active class to the winPointsDisplay element
     winPointsDisplay.classList.add('win-points--active');
 }
@@ -643,6 +649,9 @@ function enableCarouselControls() {
         // Use default
         controlBtn.style.cursor = '';
     });
+
+    // Enable touch scroll between items
+    carouselPoints.setAttribute('data-bs-touch', 'true');
 
     // Remove the win-points--active class from the winPointsDisplay element
     winPointsDisplay.classList.remove('win-points--active');
