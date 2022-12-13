@@ -85,13 +85,21 @@
 /* It's a mixin that can be used to set the style of a small button. */
 @mixin btn__style--small {
     background-color: $btn-small__bg-colour;
-    box-shadow: $shadow__btn;
+    box-shadow: $shadow__drop-soft;
     backdrop-filter: $filter__blur-4;
     -webkit-backdrop-filter: $filter__blur-4;
     border-radius: $border__10;
-    border: $btn-small__border;
+    // border: $btn-small__border;
+    transition: all 0.2s;
 
-    &:hover {
+    // &:hover {
+    //     background-color: $colour__pale-green !important;
+    //     box-shadow: $shadow__inset;
+    // }
+
+    &:active {
+        transform: translate(0%, 5px);
+        box-shadow: 0 1rem 2rem rgb(0 0 0 / 15%);
         background-color: $colour__pale-green !important;
         box-shadow: $shadow__inset;
     }
@@ -106,13 +114,21 @@
     font-weight: $font__weight-bold;
     border-radius: $border__10;
     text-transform: $font__uppercase;
+    transition: all 0.2s;
 
-    &:hover {
-        box-shadow: $shadow__inset;
-        width: $width__40;
-        color: $colour__dark-gray;
-        font-weight: $font__weight-bold;
+    // &:hover {
+    //     box-shadow: $shadow__inset;
+    //     width: $width__40;
+    //     color: $colour__dark-gray;
+    //     font-weight: $font__weight-bold;
+    //     background-color: $colour__pale-green !important;
+    // }
+
+    &:active {
+        transform: translate(0%, 5px);
+        box-shadow: 0 1rem 2rem rgb(0 0 0 / 15%);
         background-color: $colour__pale-green !important;
+        box-shadow: $shadow__inset;
     }
 }
 
