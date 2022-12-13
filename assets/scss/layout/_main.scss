@@ -10,10 +10,10 @@
         // box-shadow: $shadow__box-small;
         backdrop-filter: $filter__blur-4;
         -webkit-backdrop-filter: $filter__blur-4;
-        border-radius: $border__30;
-        border: $border__box-border;
+        border-radius: $border__20;
+        // border: $border__box-border;
         background-color: rgb(255 255 255 / 0%);
-        box-shadow: $shadow__main-inset;
+        box-shadow: $shadow__inset-soft;
         transition: all 0.3s;
 
         @include flexbox(
@@ -26,11 +26,11 @@
         &--active {
             // background-color: #8feeb596;
             // font-weight: bold;
-            box-shadow: $shadow__main;
+            box-shadow: $shadow__drop-soft;
             background: $colour__dark-plum;
             .main__current {
                 background-color: $colour__dark-plum;
-                box-shadow: $shadow__box-small;
+                box-shadow: $shadow__drop-soft;
             }
             .main__name,
             .main__score,
@@ -39,8 +39,14 @@
                 color: #000000;
             }
         }
-        &--win {
-            background-color: #8feeb596;
+        &--winner {
+            background-color: $colour__bright-green;
+            box-shadow: $shadow__drop-soft;
+        }
+
+        &--lost {
+            background-color: #d7436b;
+            box-shadow: $shadow__drop-soft;
         }
     }
 
@@ -62,12 +68,12 @@
 
     &__current {
         background: rgba(255, 255, 255, 0);
-        box-shadow: $shadow__btn;
+        box-shadow: $shadow__drop-soft;
         backdrop-filter: $filter__blur-7;
         -webkit-backdrop-filter: $filter__blur-7;
         font-family: $font__text-font;
         border-radius: $border__10;
-        border: $border__box-border;
+        // border: $border__box-border;
         width: auto !important;
         // margin-top: 0.5rem;
         margin-bottom: 0.5rem;
@@ -96,7 +102,7 @@
             height: 2rem;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
-            box-shadow: $shadow__box-small;
+            box-shadow: $shadow__drop-soft;
             border-radius: $border__10;
         }
         &--hold-col {
