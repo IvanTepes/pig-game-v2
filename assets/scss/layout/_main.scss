@@ -6,8 +6,6 @@
     width: 90% !important;
 
     &__player {
-        // background-color: $colour__transparent-025;
-        // box-shadow: $shadow__drop-soft;
         backdrop-filter: $filter__blur-4;
         -webkit-backdrop-filter: $filter__blur-4;
         border-radius: $border__20;
@@ -24,8 +22,6 @@
         );
 
         &--active {
-            // background-color: #8feeb596;
-            // font-weight: bold;
             box-shadow: $shadow__drop-soft;
             background: $colour__dark-plum;
             .main__current {
@@ -36,7 +32,7 @@
             .main__score,
             .main__current--label,
             .main__current--score {
-                color: #000000;
+                color: $colour__dark-gray;
             }
         }
         &--winner {
@@ -45,7 +41,7 @@
         }
 
         &--lost {
-            background-color: #d7436b;
+            background-color: $colour__red;
             box-shadow: $shadow__drop-soft;
         }
     }
@@ -75,7 +71,6 @@
         border-radius: $border__10;
         border: $border__box-border;
         width: auto !important;
-        // margin-top: 0.5rem;
         margin-bottom: 0.5rem;
 
         &--label {

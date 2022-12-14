@@ -476,7 +476,7 @@ body {
 .main__player--active .main__score,
 .main__player--active .main__current--label,
 .main__player--active .main__current--score {
-  color: #000000;
+  color: #1a0f15;
 }
 .main__player--winner {
   background-color: #43d791;
@@ -682,7 +682,7 @@ body {
 .audio__inner:after {
   content: "OFF";
   padding-right: 20px;
-  background-color: #eb1313;
+  background-color: #d7436b;
   color: #1a0f15;
   text-align: right;
 }

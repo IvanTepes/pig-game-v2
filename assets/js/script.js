@@ -448,7 +448,7 @@ btnHold.addEventListener('click', function () {
         ).textContent = gameScores[activePlayer];
 
         // Check if the active player has reached or surpassed the winPoints score
-        if (gameScores[activePlayer] >= 10) {
+        if (gameScores[activePlayer] >= winPoints) {
             // End the game
 
             // Set the current scores for both players to 0

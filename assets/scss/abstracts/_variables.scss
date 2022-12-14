@@ -59,7 +59,6 @@ $base-url: '/assets/' !default;
 
 // Fonts
 $font__title-font: 'Gloria Hallelujah', cursive !important;
-// $font__text-font: 'Roboto', sans-serif !important;
 $font__text-font: 'Nunito', sans-serif;
 
 $font__weight-bold: bold !important;
@@ -77,10 +76,11 @@ $colour__dark-plum: #ea80bb;
 $colour__pale-violet: #d74389;
 $colour__medium-violet: #b53b74;
 $colour__dark-violet: #762c4d;
-$colour__red: #eb1313;
+$colour__red: #d7436b;
 $colour__dime-gray: #603d51;
 $colour__dark-slategray: #3d2935;
 $colour__dark-gray: #1a0f15;
+$colour__gray: #929292;
 $colour__bright-green: #43d791;
 $colour__pale-green: #8feeb5;
 
@@ -105,10 +105,11 @@ $shadow__btn: 2px 2px 6px 0px $colour__dark-violet;
 $shadow__modal: 0px 0px 2px 0px $colour__dark-slategray;
 $shadow__text: 1px 1px 1px $colour__dark-gray;
 
-$shadow__drop-soft: 1px 1px 2px $colour__dark-gray, -0.5px -0.5px 2px #929292;
+$shadow__drop-soft: 1px 1px 2px $colour__dark-gray,
+    -0.5px -0.5px 2px $colour__gray;
 
 $shadow__inset-soft: inset 1px 1px 2px $colour__dark-gray,
-    inset -0.5px -0.5px 2px #929292;
+    inset -0.5px -0.5px 2px $colour__gray;
 
 // Filters
 $filter__blur-4: blur(4px) !important;
