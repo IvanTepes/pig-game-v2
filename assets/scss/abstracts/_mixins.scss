@@ -94,14 +94,14 @@
 
     // &:hover {
     //     background-color: $colour__pale-green !important;
-    //     box-shadow: $shadow__inset;
+    //     box-shadow: $shadow__inset-soft;
     // }
 
     &:active {
         transform: translate(0%, 5px);
         box-shadow: 0 1rem 2rem rgb(0 0 0 / 15%);
         background-color: $colour__pale-green !important;
-        box-shadow: $shadow__inset;
+        box-shadow: $shadow__inset-soft;
     }
 }
 
@@ -117,7 +117,7 @@
     transition: all 0.2s;
 
     // &:hover {
-    //     box-shadow: $shadow__inset;
+    //     box-shadow: $shadow__inset-soft;
     //     width: $width__40;
     //     color: $colour__dark-gray;
     //     font-weight: $font__weight-bold;
@@ -128,7 +128,7 @@
         transform: translate(0%, 5px);
         box-shadow: 0 1rem 2rem rgb(0 0 0 / 15%);
         background-color: $colour__pale-green !important;
-        box-shadow: $shadow__inset;
+        box-shadow: $shadow__inset-soft;
     }
 }
 

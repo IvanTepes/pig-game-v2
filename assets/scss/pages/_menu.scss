@@ -6,7 +6,7 @@
     position: fixed;
     height: 100%;
     background: $colour__background;
-    box-shadow: $shadow__inset;
+    box-shadow: $shadow__drop-soft;
     z-index: 10;
     @include flexbox(
         $display: flex,
