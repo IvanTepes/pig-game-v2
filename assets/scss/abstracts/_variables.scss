@@ -101,22 +101,13 @@ $btn-small__border: 1px solid $colour__transparent-018 !important;
 $border__box-border: $btn-small__border;
 
 // Shadows
-$shadow__inset: inset 0px 0px 6px 0px $colour__dark-slategray;
 $shadow__btn: 2px 2px 6px 0px $colour__dark-violet;
 $shadow__modal: 0px 0px 2px 0px $colour__dark-slategray;
 $shadow__text: 1px 1px 1px $colour__dark-gray;
-$shadow__box-small: 1px 1px 3px $colour__dark-slategray,
-    -1px -1px 3px $colour__medium-violet;
-$shadow__main-inset: inset 0 0 0 1px rgb(215 67 137 / 30%),
-    inset 0 0 10px rgb(215 67 137 / 60%), inset 0 5px 10px rgb(0 0 0 / 20%);
-$shadow__main: 0 0 0 1px rgb(215 67 137 / 30%), 0 0 10px rgb(215 67 137 / 60%),
-    0 5px 10px rgb(0 0 0 / 20%);
 
-$shadow__drop-soft: 0 0 0 1px rgb(215 67 137 / 30%),
-    0 0 10px rgb(215 67 137 / 60%), 0 5px 10px rgb(0 0 0 / 20%);
+$shadow__drop-soft: 1px 1px 2px #040404, -0.5px -0.5px 2px #929292;
 
-$shadow__inset-soft: inset 0 0 0 1px rgb(215 67 137 / 30%),
-    inset 0 0 10px rgb(215 67 137 / 60%), inset 0 5px 10px rgb(0 0 0 / 20%);
+$shadow__inset-soft: inset 1px 1px 2px #040404, inset -0.5px -0.5px 2px #929292;
 
 // Filters
 $filter__blur-4: blur(4px) !important;
