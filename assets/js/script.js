@@ -215,7 +215,7 @@ function startFirstRoll() {
                     setTimeout(hideFirstRollElements, 400, firstRollElToHide);
                     setTimeout(
                         setFirstRollMessage,
-                        400,
+                        500,
                         'Player 1 won the first roll!'
                     );
                     setFirstRollButton('Start game', removeListener, 'modal');
@@ -226,7 +226,7 @@ function startFirstRoll() {
                     setTimeout(hideFirstRollElements, 700, firstRollElToHide);
                     setTimeout(
                         setFirstRollMessage,
-                        400,
+                        500,
                         'Player 2 won the first roll!'
                     );
                     setFirstRollButton('Start game', removeListener, 'modal');
@@ -235,7 +235,7 @@ function startFirstRoll() {
                     initializeGame();
                 } else {
                     firstRollMessageBottomEl.textContent =
-                        'Player 1 will roll the dice again!';
+                        'Draw! Player 1 will roll the dice again!';
                     setTimeout(resetFirstRollScore, 400);
                 }
             }
