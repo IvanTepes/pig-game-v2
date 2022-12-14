@@ -22,6 +22,11 @@ let activePlayer,
 // Return a random number between 1 and 6.
 const getRandomNum = () => Math.trunc(Math.random() * 6) + 1;
 
+// ! AUDIO
+
+const audioDiceRoll = new Audio('/assets/audio/dice-roll.mp3');
+const audioBtnClick = new Audio();
+
 // ! MAIN MENU ELEMENTS
 // Selecting the elements from the HTML file.
 const mainMenuEl = document.querySelector('#js__menu');
@@ -387,7 +392,7 @@ btnRoll.forEach(function (btn) {
             if (gamePlaying) {
                 //  Generating a random dice roll
                 const dice = getRandomNum();
-
+                audioDiceRoll.play();
                 //  Display dice
                 if (diceColour === 'light') {
                     gameDiceEl.src = `assets/img/dice-img/light/dice-light-${dice}.png`;
