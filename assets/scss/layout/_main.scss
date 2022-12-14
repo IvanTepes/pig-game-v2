@@ -6,12 +6,12 @@
     width: 90% !important;
 
     &__player {
-        background-color: $colour__transparent-025;
+        // background-color: $colour__transparent-025;
         // box-shadow: $shadow__box-small;
         backdrop-filter: $filter__blur-4;
         -webkit-backdrop-filter: $filter__blur-4;
         border-radius: $border__20;
-        // border: $border__box-border;
+        border: $border__box-border;
         background-color: rgb(255 255 255 / 0%);
         box-shadow: $shadow__inset-soft;
         transition: all 0.3s;
@@ -73,7 +73,7 @@
         -webkit-backdrop-filter: $filter__blur-7;
         font-family: $font__text-font;
         border-radius: $border__10;
-        // border: $border__box-border;
+        border: $border__box-border;
         width: auto !important;
         // margin-top: 0.5rem;
         margin-bottom: 0.5rem;

@@ -450,12 +450,12 @@ body {
   width: 90% !important;
 }
 .main__player {
-  background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
   border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   background-color: rgba(255, 255, 255, 0);
-  box-shadow: inset 0 0 0 1px rgba(215, 67, 137, 0.3), inset 0 0 10px rgba(215, 67, 137, 0.6), inset 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px 1px 2px #040404, inset -0.5px -0.5px 2px #929292;
   transition: all 0.3s;
   display: flex;
   flex-direction: row;
@@ -465,12 +465,12 @@ body {
   flex-grow: 0;
 }
 .main__player--active {
-  box-shadow: 0 0 0 1px rgba(215, 67, 137, 0.3), 0 0 10px rgba(215, 67, 137, 0.6), 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px #040404, -0.5px -0.5px 2px #929292;
   background: #ea80bb;
 }
 .main__player--active .main__current {
   background-color: #ea80bb;
-  box-shadow: 0 0 0 1px rgba(215, 67, 137, 0.3), 0 0 10px rgba(215, 67, 137, 0.6), 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px #040404, -0.5px -0.5px 2px #929292;
 }
 .main__player--active .main__name,
 .main__player--active .main__score,
@@ -480,11 +480,11 @@ body {
 }
 .main__player--winner {
   background-color: #43d791;
-  box-shadow: 0 0 0 1px rgba(215, 67, 137, 0.3), 0 0 10px rgba(215, 67, 137, 0.6), 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px #040404, -0.5px -0.5px 2px #929292;
 }
 .main__player--lost {
   background-color: #d7436b;
-  box-shadow: 0 0 0 1px rgba(215, 67, 137, 0.3), 0 0 10px rgba(215, 67, 137, 0.6), 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px #040404, -0.5px -0.5px 2px #929292;
 }
 .main__name {
   font-size: 1rem;
@@ -502,11 +502,12 @@ body {
 }
 .main__current {
   background: rgba(255, 255, 255, 0);
-  box-shadow: 0 0 0 1px rgba(215, 67, 137, 0.3), 0 0 10px rgba(215, 67, 137, 0.6), 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px #040404, -0.5px -0.5px 2px #929292;
   backdrop-filter: blur(7px) !important;
   -webkit-backdrop-filter: blur(7px) !important;
   font-family: "Nunito", sans-serif;
   border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   width: auto !important;
   margin-bottom: 0.5rem;
 }
@@ -533,7 +534,7 @@ body {
   height: 2rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  box-shadow: 0 0 0 1px rgba(215, 67, 137, 0.3), 0 0 10px rgba(215, 67, 137, 0.6), 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px #040404, -0.5px -0.5px 2px #929292;
   border-radius: 10px;
 }
 .main__controls--hold-col {
@@ -589,10 +590,11 @@ body {
 /* ********* BUTTONS ********* */
 .btn__small {
   background-color: rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 0 0 0 1px rgba(215, 67, 137, 0.3), 0 0 10px rgba(215, 67, 137, 0.6), 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px #040404, -0.5px -0.5px 2px #929292;
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
   border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   transition: all 0.2s;
 }
 .btn__small:active {
@@ -713,9 +715,10 @@ body {
   font-weight: bold;
   padding: 6px 30px;
   border-radius: 10px;
-  box-shadow: 0 0 0 1px rgba(215, 67, 137, 0.3), 0 0 10px rgba(215, 67, 137, 0.6), 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px #040404, -0.5px -0.5px 2px #929292;
   -webkit-backdrop-filter: blur(7px) !important;
           backdrop-filter: blur(7px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
 .win-points--active {
   background-color: #8feeb5;
@@ -734,7 +737,7 @@ body {
   height: 35px;
   width: 35px;
   border-radius: 5px;
-  box-shadow: 0 0 0 1px rgba(215, 67, 137, 0.3), 0 0 10px rgba(215, 67, 137, 0.6), 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px #040404, -0.5px -0.5px 2px #929292;
 }
 .first-roll__active {
   background-color: #8feeb5;
