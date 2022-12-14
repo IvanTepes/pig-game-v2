@@ -634,81 +634,6 @@ body {
   border-radius: 10px;
 }
 
-/* ********* AUDIO SWITCH ********* */
-.audio {
-  position: relative;
-  width: 90px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-.audio__checkbox {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-.audio__label {
-  display: block;
-  overflow: hidden;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  box-shadow: 1px 1px 2px #1a0f15, -0.5px -0.5px 2px #929292;
-  border-radius: 20px;
-}
-.audio__inner {
-  display: block;
-  width: 200%;
-  margin-left: -100%;
-  transition: margin 0.3s ease-in 0s;
-}
-.audio__inner:before, .audio__inner:after {
-  display: block;
-  float: left;
-  width: 50%;
-  height: 30px;
-  padding: 0;
-  line-height: 32px;
-  font-size: 14px;
-  font-family: "Nunito", sans-serif;
-  font-weight: bold !important;
-  box-sizing: border-box;
-}
-.audio__inner:before {
-  content: "ON";
-  padding-right: 15px;
-  background-color: #8feeb5;
-  color: #1a0f15;
-}
-.audio__inner:after {
-  content: "OFF";
-  padding-right: 20px;
-  background-color: #d7436b;
-  color: #1a0f15;
-  text-align: right;
-}
-.audio__switch {
-  display: block;
-  width: 30px;
-  margin: 0px;
-  background: #ffc4c8;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 60px;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  box-shadow: 1px 1px 2px #1a0f15, -0.5px -0.5px 2px #929292;
-  border-radius: 20px;
-  transition: all 0.3s ease-in 0s;
-}
-
-.audio__checkbox:checked + .audio__label .audio__inner {
-  margin-left: 0;
-}
-
-.audio__checkbox:checked + .audio__label .audio__switch {
-  right: 0px;
-}
-
 /* ********* WIN POINTS ********* */
 .win-points__display {
   font-size: 0.7rem !important;
@@ -974,13 +899,12 @@ body {
 }
 /* (320x480) Smartphone, Landscape */
 @media (min-width: 480px) and (max-width: 568px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: blue;
+  .btn__icon {
+    background-color: blue;
   }
-
   .menu__game-name {
-      background-color: blue;
-  } */
+    background-color: blue;
+  }
   .btn__big {
     font-size: 0.7rem !important;
   }
@@ -998,13 +922,12 @@ body {
   }
 }
 @media (min-width: 569px) and (max-width: 640px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: green;
+  .btn__icon {
+    background-color: green;
   }
-
   .menu__game-name {
-      background-color: green;
-  } */
+    background-color: green;
+  }
   .btn__big {
     font-size: 0.7rem !important;
   }
@@ -1017,13 +940,12 @@ body {
   }
 }
 @media (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: purple;
+  .btn__icon {
+    background-color: purple;
   }
-
   .menu__game-name {
-      background-color: purple;
-  } */
+    background-color: purple;
+  }
   .btn__icon {
     height: 26px;
     width: 26px;
@@ -1051,13 +973,12 @@ body {
   }
 }
 @media (min-width: 801px) and (max-width: 900px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: red;
+  .btn__icon {
+    background-color: red;
   }
-
   .menu__game-name {
-      background-color: red;
-  } */
+    background-color: red;
+  }
   .menu__logo-image {
     height: 4rem;
   }
@@ -1088,13 +1009,12 @@ body {
   }
 }
 @media (min-width: 901px) and (max-width: 1024px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: blueviolet;
+  .btn__icon {
+    background-color: blueviolet;
   }
-
   .menu__game-name {
-      background-color: blueviolet;
-  } */
+    background-color: blueviolet;
+  }
   .menu__logo-image {
     height: 5rem;
   }
@@ -1125,13 +1045,12 @@ body {
   }
 }
 @media (min-width: 1025px) {
-  /* .btn__icon {
-      background-color: burlywood;
+  .btn__icon {
+    background-color: burlywood;
   }
-
   .menu__game-name {
-      background-color: burlywood;
-  } */
+    background-color: burlywood;
+  }
   .btn__icon {
     height: 35px;
     width: 35px;
@@ -1159,13 +1078,12 @@ body {
   }
 }
 @media (min-width: 1441px) and (orientation: landscape) {
-  /* .btn__icon {
-      background-color: darkorange;
+  .btn__icon {
+    background-color: darkorange;
   }
-
   .menu__game-name {
-      background-color: darkorange;
-  } */
+    background-color: darkorange;
+  }
   .btn__icon {
     height: 40px;
     width: 40px;

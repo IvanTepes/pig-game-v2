@@ -131,13 +131,13 @@
 
 /* (320x480) Smartphone, Landscape */
 @media (min-width: 480px) and (max-width: 568px) and (orientation: landscape) {
-    /* .btn__icon {
+    .btn__icon {
         background-color: blue;
     }
 
     .menu__game-name {
         background-color: blue;
-    } */
+    }
 
     .btn__big {
         font-size: 0.7rem !important;
@@ -161,13 +161,13 @@
 }
 
 @media (min-width: 569px) and (max-width: 640px) and (orientation: landscape) {
-    /* .btn__icon {
+    .btn__icon {
         background-color: green;
     }
 
     .menu__game-name {
         background-color: green;
-    } */
+    }
 
     .btn__big {
         font-size: 0.7rem !important;
@@ -185,13 +185,13 @@
 }
 
 @media (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
-    /* .btn__icon {
+    .btn__icon {
         background-color: purple;
     }
 
     .menu__game-name {
         background-color: purple;
-    } */
+    }
 
     .btn__icon {
         height: 26px;
@@ -227,13 +227,13 @@
     }
 }
 @media (min-width: 801px) and (max-width: 900px) and (orientation: landscape) {
-    /* .btn__icon {
+    .btn__icon {
         background-color: red;
     }
 
     .menu__game-name {
         background-color: red;
-    } */
+    }
 
     .menu__logo-image {
         height: 4rem;
@@ -273,13 +273,13 @@
     }
 }
 @media (min-width: 901px) and (max-width: 1024px) and (orientation: landscape) {
-    /* .btn__icon {
+    .btn__icon {
         background-color: blueviolet;
     }
 
     .menu__game-name {
         background-color: blueviolet;
-    } */
+    }
 
     .menu__logo-image {
         height: 5rem;
@@ -320,13 +320,13 @@
 }
 
 @media (min-width: 1025px) {
-    /* .btn__icon {
+    .btn__icon {
         background-color: burlywood;
     }
 
     .menu__game-name {
         background-color: burlywood;
-    } */
+    }
 
     .btn__icon {
         height: 35px;
@@ -363,13 +363,13 @@
 }
 
 @media (min-width: 1441px) and (orientation: landscape) {
-    /* .btn__icon {
+    .btn__icon {
         background-color: darkorange;
     }
 
     .menu__game-name {
         background-color: darkorange;
-    } */
+    }
 
     .btn__icon {
         height: 40px;
